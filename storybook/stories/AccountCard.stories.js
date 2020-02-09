@@ -10,6 +10,6 @@ export const PrimaryExample = () => (
     color="#5E26FF"
     alias="Prime"
     address="t1z225tguggx4onbauimqvxzutopzdr2m4s6z6wgi"
-    onSwitch={() => console.log('switching accounts!')}
+    onAccountSwitch={() => console.log('button clicked!')}
   />
 );
