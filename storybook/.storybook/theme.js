@@ -1,5 +1,5 @@
 import { create } from '@storybook/theming';
-import logotype from './../static/rimble-logotype.svg';
+import owl from './../static/owl_logo.jpg';
 
 export default create({
   base: 'light',
@@ -32,7 +32,7 @@ export default create({
   // inputTextColor: 'black',
   // inputBorderRadius: 4,
 
-  brandTitle: 'Rimble UI',
-  brandUrl: '//rimble.consensys.design',
-  brandImage: logotype,
+  brandTitle: 'Filecoin wallet UI',
+  brandUrl: 'openworklabs.com',
+  brandImage: owl
 });
