@@ -1,5 +1,6 @@
 import React from 'react';
 import { configure, addParameters, addDecorator } from '@storybook/react';
+import { withPropsTable } from 'storybook-addon-react-docgen';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { withA11y } from '@storybook/addon-a11y';
 import {
@@ -7,6 +8,8 @@ import {
   BaseStyles
 } from '@openworklabs/filecoin-wallet-styleguide';
 import theme from './theme';
+
+addDecorator(withPropsTable);
 
 addParameters({ options: { theme } });
 
