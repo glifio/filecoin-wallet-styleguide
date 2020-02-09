@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string, func } from 'prop-types';
 
 const truncate = string => `${string.slice(0, 4)}...${string.slice(-4)}`;
 
@@ -124,23 +124,23 @@ AccountCard.propTypes = {
   /**
    * Filecoin address
    */
-  address: PropTypes.string.isRequired,
+  address: string.isRequired,
   /**
    * Human readable alias of Filecoin address
    */
-  alias: PropTypes.string.isRequired,
+  alias: string.isRequired,
   /**
    * Sets background-color of the card
    */
-  color: PropTypes.string,
+  color: string,
   /**
    * Fired when the "switch" button is clicked
    */
-  onAccountSwitch: PropTypes.func.isRequired,
+  onAccountSwitch: func.isRequired
 };
 
 AccountCard.defaultProps = {
-  color: 'white',
+  color: 'white'
 };
 
 AccountCard.displayName = 'AccountCard';

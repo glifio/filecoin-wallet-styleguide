@@ -13,12 +13,3 @@ export const PrimaryExample = () => (
     onSwitch={() => console.log('switching accounts!')}
   />
 );
-
-export const SecondaryExample = () => (
-  <AccountCard
-    color="darkblue"
-    alias="Dual"
-    address="t1z225tguggx4onbauimqvxzutopzdr2m4s6z6wgi"
-    onSwitch={() => console.log('switching accounts!')}
-  />
-);
