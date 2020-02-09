@@ -22,9 +22,9 @@ export default create({
   // textInverseColor: 'rgba(255,255,255,0.9)',
 
   // Toolbar default and active colors
-  barTextColor: 'silver',
-  barSelectedColor: 'black',
-  barBg: 'aqua',
+  // barTextColor: 'silver',
+  // barSelectedColor: 'black',
+  // barBg: 'aqua',
 
   // Form colors
   // inputBg: 'white',

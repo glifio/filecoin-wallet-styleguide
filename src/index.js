@@ -7,3 +7,5 @@ export { default as AccountCard } from './AccountCard';
 export { default as BalanceCard } from './BalanceCard';
 export { default as Box } from './Box';
 export { default as Input } from './Input';
+export { default as Address } from './Address';
+export { default as Button } from './Button';

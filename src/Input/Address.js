@@ -1,5 +1,5 @@
-import React, { useState, forwardRef } from 'react';
-import { func, string, shape } from 'prop-types';
+import React, { forwardRef } from 'react';
+import { func, string } from 'prop-types';
 
 const Address = forwardRef(
   ({ onChange, value, placeholder, label, error, ...props }, ref) => {
@@ -9,7 +9,7 @@ const Address = forwardRef(
         <div>{label}</div>
         {/* how do we chunk the address in the input component? */}
         <input onChange={onChange} value={value} placeholder="t1..." />
-        {error.type && <p>{error.message}</p>}
+        {error && <p>{error}</p>}
       </div>
     );
   }
@@ -19,14 +19,10 @@ Address.propTypes = {
   onChange: func.isRequired,
   label: string.isRequired,
   value: string,
-  error: shape({
-    message: string,
-    type: string
-  })
+  error: string
 };
 
 Address.defaultProps = {
-  error: { type: null, message: '' },
   value: ''
 };
 

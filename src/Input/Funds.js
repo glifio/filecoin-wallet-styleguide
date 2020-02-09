@@ -9,7 +9,7 @@ const Funds = forwardRef(
         <div>Amount</div>
         {/* how do we chunk the address in the input component? */}
         <input onChange={onChange} value={value} placeholder="t1..." />
-        {error.type && <p>{error.message}</p>}
+        {error && <p>{error}</p>}
       </div>
     );
   }
@@ -19,14 +19,10 @@ Funds.propTypes = {
   onChange: func.isRequired,
   label: string.isRequired,
   value: string,
-  error: shape({
-    message: string,
-    type: string
-  })
+  error: string
 };
 
 Funds.defaultProps = {
-  error: { type: null, message: '' },
   value: ''
 };
 
