@@ -1,6 +1,6 @@
 {
   "name": "@openworklabs/filecoin-wallet-styleguide",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Styleguide used for the Filecoin web wallet.",
   "author": "Open Work Labs",
   "license": "MIT",
@@ -20,6 +20,7 @@
     "predeploy": "cd example && yarn install && yarn run build"
   },
   "dependencies": {
+    "@openworklabs/filecoin-address": "0.0.3",
     "@svgr/rollup": "^4.2.0",
     "polished": "^3.4.4",
     "styled-system": "^4.1.0"
