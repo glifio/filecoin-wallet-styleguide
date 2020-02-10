@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 import { string, func } from 'prop-types';
+import { ADDRESS_PROPTYPE } from '../customPropTypes';
 
 /*
  @ALEX - should we consider extending the ColoredContainer component for this?
@@ -133,7 +134,7 @@ AccountCard.propTypes = {
   /**
    * Filecoin address
    */
-  address: string.isRequired,
+  address: ADDRESS_PROPTYPE,
   /**
    * Human readable alias of Filecoin address
    */

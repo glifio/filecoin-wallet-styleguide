@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { string } from 'prop-types';
+import { ADDRESS_PROPTYPE } from '../customPropTypes';
 
 // copmponent responsible for chunking addresses
 
@@ -13,7 +13,7 @@ Address.propTypes = {
   /**
    * filecoin address
    */
-  address: string
+  address: ADDRESS_PROPTYPE
 };
 
 Address.defaultProps = {
