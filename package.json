@@ -17,7 +17,9 @@
     "start": "rollup -c -w",
     "prepublish": "npm run build",
     "prepare": "npm run build",
-    "predeploy": "cd example && yarn install && yarn run build"
+    "predeploy": "cd example && yarn install && yarn run build",
+    "lint": "estlin src storybook",
+    "lint:fix": "eslint src storybook --fix"
   },
   "dependencies": {
     "@openworklabs/filecoin-address": "0.0.3",
