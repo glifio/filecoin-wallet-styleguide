@@ -1,5 +1,5 @@
-import React, { forwardRef } from 'react';
-import { string, func, bool } from 'prop-types';
+import React, { forwardRef } from 'react'
+import { string, func, bool } from 'prop-types'
 
 /*
  @ALEX - should we consider extending the ColoredContainer component for this?
@@ -21,7 +21,7 @@ const BalanceCard = forwardRef(
       </button>
     </div>
   )
-);
+)
 
 BalanceCard.propTypes = {
   /**
@@ -40,10 +40,10 @@ BalanceCard.propTypes = {
    * determines if the buttons should be disabled or not
    */
   disableButtons: bool
-};
+}
 
 BalanceCard.defaultProps = {
   disableButtons: false
-};
+}
 
-export default BalanceCard;
+export default BalanceCard

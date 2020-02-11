@@ -1,18 +1,18 @@
-import React, { forwardRef } from 'react';
-import { array } from 'prop-types';
+import React, { forwardRef } from 'react'
+import { array } from 'prop-types'
 
-import { ADDRESS_PROPTYPE, MESSAGE_PROPS } from '../customPropTypes';
-import MessageRow from './MessageRow';
+import { ADDRESS_PROPTYPE, MESSAGE_PROPS } from '../customPropTypes'
+import MessageRow from './MessageRow'
 
 const MsgHistoryTable = forwardRef(({ address, messages, ...props }, ref) => {
   return (
     <div ref={ref} {...props}>
       {messages.map(msg => (
-        <MessageRow {...msg} />
+        <MessageRow key={msg.cid} {...msg} />
       ))}
     </div>
-  );
-});
+  )
+})
 
 MsgHistoryTable.propTypes = {
   /**
@@ -23,6 +23,6 @@ MsgHistoryTable.propTypes = {
    * An array of message types
    */
   messages: array(MESSAGE_PROPS)
-};
+}
 
-export default MsgHistoryTable;
+export default MsgHistoryTable
