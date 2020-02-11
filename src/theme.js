@@ -94,33 +94,6 @@ const theme = {
     disabled: 0.4
   },
   zIndices: [0, 9, 99, 999, 9999],
-  messageStyle: {
-    base: {
-      color: shade(0.4, '#AAA'),
-      backgroundColor: tint(0.9, '#AAA'),
-      borderColor: '#AAA'
-    },
-    success: {
-      color: shade(0.4, green.base),
-      backgroundColor: tint(0.9, green.base),
-      borderColor: green.base
-    },
-    warning: {
-      color: shade(0.4, yellow.base),
-      backgroundColor: tint(0.9, yellow.base),
-      borderColor: yellow.base
-    },
-    danger: {
-      color: shade(0.4, red.base),
-      backgroundColor: tint(0.9, red.base),
-      borderColor: red.base
-    },
-    info: {
-      color: shade(0.4, blue.base),
-      backgroundColor: tint(0.9, blue.base),
-      borderColor: blue.base
-    }
-  },
   buttons: {
     primary: {
       color: blurple.text,
