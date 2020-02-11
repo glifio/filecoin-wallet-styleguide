@@ -1,5 +1,5 @@
 import { validateAddressString } from '@openworklabs/filecoin-address';
-import { string, shape } from 'prop-types';
+import { string, shape, number } from 'prop-types';
 
 export const ADDRESS_PROPTYPE = (props, propName, componentName) => {
   if (!validateAddressString(props[propName]))
