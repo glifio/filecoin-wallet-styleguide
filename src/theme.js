@@ -60,18 +60,19 @@ const colors = {
 // theme.js
 const theme = {
   colors,
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
-  fontWeights: [0, 300, 400, 600, 700],
+  fontSizes: [14, 16, 20, 24, 32, 48],
+  fontWeights: [0, 400, 600, 900],
   letterSpacings: [0, 1, 2, 4, 8],
   lineHeights: {
     solid: 1,
-    title: 1.25,
-    copy: 1.5
+    title: 1.2,
+    copy: 1.4
   },
   fonts: {
-    serif: 'athelas, georgia, times, serif',
-    sansSerif: '"Source Sans Pro", -apple-system, sans-serif',
-    mono: '"Source Code Pro", -apple-system, monospace'
+    sansSerif:
+      '"system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";',
+    mono:
+      '"system-ui", "Segoe UI", Roboto Mono, Helvetica, Arial, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";'
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   radii: ['0', '4px', '8px', '16px', '32px'],
@@ -84,6 +85,7 @@ const theme = {
   borders: [0, '1px solid transparent'],
   borderWidths: ['0', '1px', '2px', '4px'],
   breakpoints: ['40em', '52em', '64em'],
+  /* Alex, Todo - Use SmoothShadow https://css-tricks.com/make-a-smooth-shadow-friend/  */
   shadows: [
     '0',
     '0px 2px 4px rgba(0, 0, 0, 0.1)',
