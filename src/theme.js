@@ -10,9 +10,9 @@ const colors = {
   'primary-light': purple.light[1],
   'primary-dark': purple.dark[1],
   black: '#000',
-  near-black: '#111',
-  dark-gray: '#333',
-  mid-gray: '#555',
+  nearBlack: '#111',
+  darkGray: '#333',
+  midGray: '#555',
   silver: '#999',
   'light-silver': '#aaa',
   'moon-gray': '#ccc',
@@ -21,8 +21,8 @@ const colors = {
   white: '#fff',
   transparent: 'transparent',
   success: green.base,
-  warning: yellow.base,
-  danger: red.base,
+  // warning: yellow.base, do we need this?
+  error: red.base,
   info: blue.base
 };
 
