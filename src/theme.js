@@ -110,24 +110,6 @@ const theme = {
       '--main-color': red.base,
       '--contrast-color': red.text
     }
-  },
-  buttonSizes: {
-    small: {
-      fontSize: '0.75rem',
-      height: '2rem',
-      minWidth: '2rem',
-      padding: '0 1rem'
-    },
-    medium: {
-      fontSize: '1rem',
-      height: '3rem',
-      minWidth: '3rem'
-    },
-    large: {
-      fontSize: '1.5rem',
-      height: '4rem',
-      minWidth: '4rem'
-    }
   }
 };
 
