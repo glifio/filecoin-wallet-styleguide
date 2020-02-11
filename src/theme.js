@@ -4,11 +4,11 @@ import baseColors, { purple, blue, green, yellow, red } from './colors';
 
 // colors
 const colors = {
-  text: colors.dark - gray,
+  text: '#262626',
   background: '#F6F8FE',
   primary: purple.base,
-  'primary-light': purple.light[1],
-  'primary-dark': purple.dark[1],
+  // 'primary-light': purple.light[1],
+  // 'primary-dark': purple.dark[1],
   black: '#000',
   nearBlack: '#111',
   darkGray: '#333',
@@ -54,7 +54,7 @@ const theme = {
   borders: [0, '1px solid transparent'],
   borderWidths: ['0', '1px', '2px', '4px'],
   breakpoints: ['40em', '52em', '64em'],
-  /* Alex, Todo - Use SmoothShadow https://css-tricks.com/make-a-smooth-shadow-friend/  */
+  // Alex, Todo - Use SmoothShadow https://css-tricks.com/make-a-smooth-shadow-friend/
   shadows: [
     '0',
     '0px 2px 4px rgba(0, 0, 0, 0.1)',
