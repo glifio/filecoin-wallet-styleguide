@@ -21,9 +21,9 @@ const colors = {
   white: '#fff',
   transparent: 'transparent',
   success: green.base,
-  // warning: yellow.base, do we need this?
-  error: red.base,
-  info: blue.base
+  // warning: yellow.base - do we need this?
+  error: red.base
+  // info: blue.base - do we need this?
 };
 
 // theme.js
