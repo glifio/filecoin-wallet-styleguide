@@ -93,24 +93,7 @@ const theme = {
   opacity: {
     disabled: 0.4
   },
-  zIndices: [0, 9, 99, 999, 9999],
-  buttons: {
-    primary: {
-      color: blurple.text,
-      backgroundColor: blurple.base,
-      // use css custom props
-      '--main-color': blurple.base,
-      '--contrast-color': blurple.text
-    },
-    success: {
-      '--main-color': green.base,
-      '--contrast-color': green.text
-    },
-    danger: {
-      '--main-color': red.base,
-      '--contrast-color': red.text
-    }
-  }
+  zIndices: [0, 9, 99, 999, 9999]
 };
 
 export default theme;
