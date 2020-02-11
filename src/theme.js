@@ -1,14 +1,14 @@
 import { tint, shade } from 'polished';
 
-import baseColors, { blurple, blue, green, yellow, red } from './colors';
+import baseColors, { purple, blue, green, yellow, red } from './colors';
 
 // colors
 const colors = {
   text: '#3F3D4B',
   background: '#fff',
-  primary: blurple.base,
-  'primary-light': blurple.light[1],
-  'primary-dark': blurple.dark[1],
+  primary: purple.base,
+  'primary-light': purple.light[1],
+  'primary-dark': purple.dark[1],
   blue: baseColors.consensysblue,
   black: '#000',
   'near-black': '#111',
