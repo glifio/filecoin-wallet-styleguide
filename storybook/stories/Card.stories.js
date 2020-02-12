@@ -21,3 +21,18 @@ export const LedgerOnboardingCard = () => (
     </Box>
   </Card>
 )
+
+export const OnboardingStepCard = () => (
+  <Card>
+    <Box display="flex" alignItems="center">
+      <Glyph acronym="Ld" />
+      <Text ml={3}>Step 1</Text>
+    </Box>
+    <Box display="block">
+      <Text>
+        Please complete the following steps so Filament can interface with your
+        Ledger device
+      </Text>
+    </Box>
+  </Card>
+)
