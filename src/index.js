@@ -66,6 +66,14 @@ export const Icon = styled.span`
 //     outline: none;
 //   }
 // `
+export const Title = styled.h1`
+  margin: 0;
+  font-weight: 700;
+  color: #444;
+  ${color}
+  ${typography}
+  ${layout}
+`
 
 export const Label = styled.h5`
   margin: 0;
