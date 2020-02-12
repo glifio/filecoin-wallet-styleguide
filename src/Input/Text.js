@@ -1,5 +1,5 @@
-import React from 'react'
-import { func, string } from 'prop-types'
+import React from 'react';
+import { func, string } from 'prop-types';
 
 const Text = ({ onChange, value, placeholder, label, error }) => (
   <>
@@ -7,7 +7,7 @@ const Text = ({ onChange, value, placeholder, label, error }) => (
     <input onChange={onChange} value={value} placeholder={placeholder} />
     {error && <p>{error}</p>}
   </>
-)
+);
 
 Text.propTypes = {
   onChange: func.isRequired,
@@ -15,10 +15,10 @@ Text.propTypes = {
   value: string,
   placeholder: string,
   error: string
-}
+};
 
 Text.defaultProps = {
   value: ''
-}
+};
 
-export default Text
+export default Text;

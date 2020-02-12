@@ -1,5 +1,5 @@
-import React, { useState, forwardRef } from 'react'
-import { func, string, shape } from 'prop-types'
+import React, { useState, forwardRef } from 'react';
+import { func, string, shape } from 'prop-types';
 
 const Funds = forwardRef(
   ({ onChange, value, placeholder, label, error }, ref) => {
@@ -11,20 +11,19 @@ const Funds = forwardRef(
         <input onChange={onChange} value={value} placeholder="t1..." />
         {error && <p>{error}</p>}
       </div>
-    )
+    );
   }
-)
+);
 
 Funds.propTypes = {
   onChange: func.isRequired,
   label: string.isRequired,
   value: string,
-  error: string,
-  placeholder: string
-}
+  error: string
+};
 
 Funds.defaultProps = {
   value: ''
-}
+};
 
-export default Funds
+export default Funds;

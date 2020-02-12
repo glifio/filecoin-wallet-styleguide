@@ -1,5 +1,5 @@
-import React, { forwardRef } from 'react'
-import { string, number } from 'prop-types'
+import React, { forwardRef } from 'react';
+import { string, number } from 'prop-types';
 
 const Stepper = forwardRef(
   (
@@ -26,7 +26,7 @@ const Stepper = forwardRef(
       ))}
     </div>
   )
-)
+);
 
 Stepper.propTypes = {
   /**
@@ -49,6 +49,6 @@ Stepper.propTypes = {
    * Total steps the user should take (1 indexed)
    */
   totalSteps: number.isRequired
-}
+};
 
-export default Stepper
+export default Stepper;

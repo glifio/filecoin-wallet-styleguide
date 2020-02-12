@@ -1,12 +1,12 @@
-import React, { forwardRef } from 'react'
-import { string, func } from 'prop-types'
-import { ADDRESS_PROPTYPE } from '../customPropTypes'
+import React, { forwardRef } from 'react';
+import { string, func } from 'prop-types';
+import { ADDRESS_PROPTYPE } from '../customPropTypes';
 
 /*
  @ALEX - should we consider extending the ColoredContainer component for this?
 */
 
-const truncate = string => `${string.slice(0, 4)}...${string.slice(-4)}`
+const truncate = string => `${string.slice(0, 4)}...${string.slice(-4)}`;
 
 const AccountCard = forwardRef(
   ({ address, alias, color, onAccountSwitch, ...props }, ref) => (
@@ -128,7 +128,7 @@ const AccountCard = forwardRef(
       </div>
     </div>
   )
-)
+);
 
 AccountCard.propTypes = {
   /**
@@ -147,12 +147,12 @@ AccountCard.propTypes = {
    * Fired when the "switch" button is clicked
    */
   onAccountSwitch: func.isRequired
-}
+};
 
 AccountCard.defaultProps = {
   color: 'white'
-}
+};
 
-AccountCard.displayName = 'AccountCard'
+AccountCard.displayName = 'AccountCard';
 
-export default AccountCard
+export default AccountCard;

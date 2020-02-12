@@ -43,10 +43,13 @@ import {
   flex,
   justifySelf,
   alignSelf,
-  order
-} from 'styled-system'
+  order,
+} from 'styled-system';
 
-export const COMMON = compose(color, space)
+export const COMMON = compose(
+  color,
+  space
+);
 
 export const TYPOGRAPHY = compose(
   fontFamily,
@@ -55,7 +58,7 @@ export const TYPOGRAPHY = compose(
   lineHeight,
   textAlign,
   letterSpacing
-)
+);
 
 export const LAYOUT = compose(
   display,
@@ -68,11 +71,23 @@ export const LAYOUT = compose(
   maxHeight,
   overflow,
   verticalAlign
-)
+);
 
-export const POSITION = compose(position, zIndex, top, right, bottom, left)
+export const POSITION = compose(
+  position,
+  zIndex,
+  top,
+  right,
+  bottom,
+  left
+);
 
-export const BORDERS = compose(borders, borderColor, borderRadius, boxShadow)
+export const BORDERS = compose(
+  borders,
+  borderColor,
+  borderRadius,
+  boxShadow
+);
 
 export const FLEXBOX = compose(
   // container
@@ -88,4 +103,4 @@ export const FLEXBOX = compose(
   justifySelf,
   alignSelf,
   order
-)
+);

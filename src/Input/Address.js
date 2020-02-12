@@ -1,5 +1,5 @@
-import React, { forwardRef } from 'react'
-import { func, string } from 'prop-types'
+import React, { forwardRef } from 'react';
+import { func, string } from 'prop-types';
 
 const Address = forwardRef(
   ({ onChange, value, placeholder, label, error, ...props }, ref) => {
@@ -11,20 +11,19 @@ const Address = forwardRef(
         <input onChange={onChange} value={value} placeholder="t1..." />
         {error && <p>{error}</p>}
       </div>
-    )
+    );
   }
-)
+);
 
 Address.propTypes = {
   onChange: func.isRequired,
   label: string.isRequired,
   value: string,
-  error: string,
-  placeholder: string
-}
+  error: string
+};
 
 Address.defaultProps = {
   value: ''
-}
+};
 
-export default Address
+export default Address;
