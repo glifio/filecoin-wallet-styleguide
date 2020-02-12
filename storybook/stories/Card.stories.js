@@ -23,7 +23,12 @@ export const LedgerOnboardingCard = () => (
 )
 
 export const OnboardingStepCard = () => (
-  <Card>
+  <Card
+    display="flex"
+    flexDirection="column"
+    justifyContent="space-between"
+    height={300}
+  >
     <Box display="flex" alignItems="center">
       <Glyph acronym="Ld" />
       <Text ml={3}>Step 1</Text>
