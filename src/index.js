@@ -26,6 +26,15 @@ export { default as Box } from './Box'
 // typography
 export { default as Text } from './Text'
 
+//button
+export const BaseButton = styled.button`
+  ${space}
+  ${color}
+  ${layout}
+  ${border}
+  ${flexbox}
+`
+
 export const Menu = styled.ul`
   list-style: none;
   margin: 0;
