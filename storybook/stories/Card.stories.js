@@ -1,20 +1,23 @@
 import React from 'react'
-import { Box, Text } from '@openworklabs/filecoin-wallet-styleguide'
+import {
+  Box,
+  Text,
+  Glyph,
+  Card
+} from '@openworklabs/filecoin-wallet-styleguide'
 
 export default {
-  title: 'Card'
+  title: 'OnboardingCard'
 }
 
 export const LedgerOnboardingCard = () => (
-  <Box display="inline-block" p={3} border={1} borderRadius={2} color="text">
+  <Card>
     <Box display="flex" alignItems="center">
-      <Box border={1} height={32} width={32} border={3}>
-        Ld
-      </Box>
-      <Text>Ledger Device</Text>
+      <Glyph acronym="Ld" />
+      <Text ml={3}>Ledger Device</Text>
     </Box>
     <Box display="block">
       <Text>Use Filament to access your Ledger device</Text>
     </Box>
-  </Box>
+  </Card>
 )
