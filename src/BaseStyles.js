@@ -60,7 +60,7 @@ BaseStyles.defaultProps = {
 }
 
 BaseStyles.propTypes = {
-  ...TYPOGRAPHY.propTypes,
+  ...typography.propTypes,
   ...space.propTypes,
   ...color.propTypes,
   theme: PropTypes.object
