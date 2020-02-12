@@ -3,6 +3,7 @@ import commonjs from 'rollup-plugin-commonjs'
 import external from 'rollup-plugin-peer-deps-external'
 import resolve from 'rollup-plugin-node-resolve'
 import url from 'rollup-plugin-url'
+import { eslint } from 'rollup-plugin-eslint'
 import svgr from '@svgr/rollup'
 
 import pkg from './package.json'
@@ -28,20 +29,21 @@ export default {
     {
       file: pkg.main,
       format: 'umd',
-      name: 'rimble',
+      name: '@openworklabs/filecoin-wallet-styleguide',
       sourcemap: true,
       globals: outputGlobals
     },
     {
       file: pkg.module,
       format: 'es',
-      name: 'rimble',
+      name: '@openworklabs/filecoin-wallet-styleguide',
       sourcemap: true,
       globals: outputGlobals
     }
   ],
   plugins: [
     external(),
+    eslint(),
     url(),
     svgr({
       ref: true,

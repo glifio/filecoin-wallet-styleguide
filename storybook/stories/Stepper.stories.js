@@ -1,9 +1,9 @@
-import React from 'react';
-import { Stepper } from '@openworklabs/filecoin-wallet-styleguide';
+import React from 'react'
+import { Stepper } from '@openworklabs/filecoin-wallet-styleguide'
 
 export default {
   title: 'Stepper'
-};
+}
 
 export const ThreeSteps = () => {
   return (
@@ -14,5 +14,5 @@ export const ThreeSteps = () => {
       completeDotColor="green"
       textColor="blue"
     />
-  );
-};
+  )
+}

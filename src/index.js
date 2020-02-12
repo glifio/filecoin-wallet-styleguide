@@ -3,8 +3,7 @@ import {
   color,
   typography,
   border,
-  //   layout,
-  position,
+  layout,
   space,
   flexbox
 } from 'styled-system'
@@ -16,10 +15,9 @@ export { default as BaseStyles } from './BaseStyles'
 // components
 export { default as AccountCard } from './AccountCard'
 export { default as BalanceCard } from './BalanceCard'
-// export { default as Box } from './Box'
-// export { default as Input } from './Input'
+export { default as Input } from './Input'
 export { default as Address } from './Address'
-// export { default as Button } from './Button'
+export { default as Button } from './Button'
 export { default as Stepper } from './Stepper'
 
 export const Box = styled.div`
@@ -60,19 +58,19 @@ export const Icon = styled.span`
   ${border}
 `
 
-export const Input = styled.input`
-  
-  ${space}
-  ${color}
-  ${layout}
-  ${flexbox}
-  ${border}
-  ${typography}
+// export const Input = styled.input`
 
-  &:focus {
-    outline: none;
-  }
-`
+//   ${space}
+//   ${color}
+//   ${layout}
+//   ${flexbox}
+//   ${border}
+//   ${typography}
+
+//   &:focus {
+//     outline: none;
+//   }
+// `
 
 export const Text = styled.p`
   ${color}

@@ -1,6 +1,6 @@
-import { tint, shade } from 'polished';
+import { tint, shade } from 'polished'
 
-import baseColors, { blurple, blue, green, yellow, red } from './colors';
+import baseColors, { blurple, blue, green, yellow, red } from './colors'
 
 // colors
 const colors = {
@@ -55,7 +55,7 @@ const colors = {
   warning: yellow.base,
   danger: red.base,
   info: blue.base
-};
+}
 
 // theme.js
 const theme = {
@@ -156,6 +156,6 @@ const theme = {
       minWidth: '4rem'
     }
   }
-};
+}
 
-export default theme;
+export default theme
