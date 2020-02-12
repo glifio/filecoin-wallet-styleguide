@@ -1,10 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled, { createGlobalStyle } from 'styled-components';
-import { themeGet } from 'styled-system';
-import { normalize } from 'polished';
-import { TYPOGRAPHY, COMMON } from './constants';
-import theme from './theme';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled, { createGlobalStyle } from 'styled-components'
+import { themeGet, typography } from 'styled-system'
+import { normalize } from 'polished'
+import theme from './theme'
 
 const GlobalStyle = createGlobalStyle`
   ${normalize()}
@@ -36,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
   h6 {
     font-size: ${themeGet('fontSizes.1', '')}px;
   }
-`;
+`
 
 const Base = ({ children, ...rest }) => {
   return (
@@ -44,25 +43,27 @@ const Base = ({ children, ...rest }) => {
       <GlobalStyle />
       {children}
     </div>
-  );
-};
+  )
+}
 
 const BaseStyles = styled(Base)`
-  ${TYPOGRAPHY};
-  ${COMMON};
-`;
+  ${space};
+  ${typography};
+  ${color};
+`
 
 BaseStyles.defaultProps = {
   fontSize: '2',
   fontFamily: 'sansSerif',
   color: 'text',
-  theme,
-};
+  theme
+}
 
 BaseStyles.propTypes = {
   ...TYPOGRAPHY.propTypes,
-  ...COMMON.propTypes,
-  theme: PropTypes.object,
-};
+  ...space.propTypes,
+  ...color.propTypes,
+  theme: PropTypes.object
+}
 
-export default BaseStyles;
+export default BaseStyles
