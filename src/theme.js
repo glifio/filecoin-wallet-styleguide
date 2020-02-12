@@ -41,15 +41,17 @@ const theme = {
     mono:
       '"system-ui", "Segoe UI", Roboto Mono, Helvetica, Arial, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";'
   },
-  space: [0, 4, 8, 16, 32, 64, 128, 256],
+  space: [0, 4, 8, 16, 24, 32, 48, 64, 128, 256],
+  sizes: [0, 4, 8, 16, 24, 32, 48, 64, 80],
   radii: ['0', '4px', '8px', '16px', '32px'],
-  width: [0, 16, 32, 64, 128, 256],
+  width: [0, 16, 32, 48, 64, 128, 256],
   minWidths: [0, 16, 32, 64, 128, 256],
   maxWidths: [0, 16, 32, 64, 128, 256, 512, 768, 1024, 1536],
-  heights: [0, 16, 32, 64, 128, 256],
+  heights: [0, 16, 32, 48, 64, 128, 256],
   minHeights: [0, 16, 32, 64, 128, 256],
   maxHeights: [0, 16, 32, 64, 128, 256],
-  borders: [0, '1px solid transparent'],
+  borders: [0, `4px solid`],
+  borderStyles: ['solid'],
   borderWidths: ['0', '1px', '2px', '4px'],
   breakpoints: ['40em', '52em', '64em'],
   // Alex, Todo - Use SmoothShadow https://css-tricks.com/make-a-smooth-shadow-friend/

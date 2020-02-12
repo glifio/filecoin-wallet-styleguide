@@ -19,17 +19,11 @@ export { default as Input } from './Input'
 export { default as Address } from './Address'
 export { default as Button } from './Button'
 export { default as Stepper } from './Stepper'
+export { default as Glyph } from './Glyph'
+export { default as Box } from './Box'
 
-export const Box = styled.div`
-  box-sizing: border-box;
-  min-width: 0;
-  ${space}
-  ${color}
-  ${layout}
-  ${flexbox}
-  ${border}
-  ${typography}
-`
+// typography
+export { default as Text } from './Text'
 
 export const Menu = styled.ul`
   list-style: none;
@@ -72,11 +66,6 @@ export const Icon = styled.span`
 //   }
 // `
 
-export const Text = styled.p`
-  ${color}
-  ${typography}
-  ${layout}
-`
 export const Label = styled.h5`
   margin: 0;
   text-transform: uppercase;

@@ -33,7 +33,7 @@ export const TextWithError = () => {
 export const Address = () => {
   const [value, setValue] = useState('')
   return (
-    <Input.Text
+    <Input.Address
       onChange={e => setValue(e.target.value)}
       value={value}
       label="TO"
@@ -45,7 +45,7 @@ export const Address = () => {
 export const Funds = () => {
   const [value, setValue] = useState('')
   return (
-    <Input.Text
+    <Input.Funds
       onChange={e => setValue(e.target.value)}
       value={value}
       label="AMOUNT"
