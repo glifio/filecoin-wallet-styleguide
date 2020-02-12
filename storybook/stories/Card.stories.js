@@ -2,6 +2,7 @@ import React from 'react'
 import {
   Box,
   Text,
+  Title,
   Glyph,
   Card,
   Stepper
@@ -49,6 +50,23 @@ export const OnboardingStepCard = () => (
         Please complete the following steps so Filament can interface with your
         Ledger device
       </Text>
+    </Box>
+  </Card>
+)
+
+export const OnboardingHelperCard = () => (
+  <Card
+    display="flex"
+    flexDirection="column"
+    justifyContent="space-between"
+    borderColor="silver"
+    height={300}
+  >
+    <Box display="flex" alignItems="center">
+      <Title>First</Title>
+    </Box>
+    <Box display="block" mt={3}>
+      <Text>Please connect your Ledger to your computer.</Text>
     </Box>
   </Card>
 )
