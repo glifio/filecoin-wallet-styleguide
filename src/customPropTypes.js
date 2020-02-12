@@ -1,5 +1,5 @@
-import { validateAddressString } from '@openworklabs/filecoin-address';
-import { string, shape, number } from 'prop-types';
+import { validateAddressString } from '@openworklabs/filecoin-address'
+import { string, shape, number } from 'prop-types'
 
 export const ADDRESS_PROPTYPE = (props, propName, componentName) => {
   if (!validateAddressString(props[propName]))
@@ -10,10 +10,10 @@ export const ADDRESS_PROPTYPE = (props, propName, componentName) => {
         ' `' +
         componentName +
         '`. Validation failed.'
-    );
+    )
 
-  return null;
-};
+  return null
+}
 
 export const MESSAGE_PROPS = shape({
   /**
@@ -44,4 +44,4 @@ export const MESSAGE_PROPS = shape({
    * Either pending or confirmed
    */
   status: string.isRequired
-}).isRequired;
+}).isRequired

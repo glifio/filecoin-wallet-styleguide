@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 import {
   ThemeProvider,
   theme,
   Box
-} from '@openworklabs/filecoin-wallet-styleguide';
+} from '@openworklabs/filecoin-wallet-styleguide'
 
 export default {
   title: 'Box'
-};
+}
 
 /*
 @ALEX - can we show an example of applying styled-system
@@ -24,4 +24,4 @@ export const BlueBox = () => (
       <div>Yo!</div>
     </Box>
   </ThemeProvider>
-);
+)

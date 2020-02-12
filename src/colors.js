@@ -1,5 +1,3 @@
-import { tint, shade, readableColor } from 'polished';
-
 // base colors
 const baseColors = {
   black: '#000',
@@ -9,7 +7,7 @@ const baseColors = {
   yellow: '',
   red: '#F96C6C',
   purple: '#5E26FF'
-};
+}
 
 // palette
 // Keeping light/dark values in here for the future if we want to roll a dark theme
@@ -45,18 +43,18 @@ const colors = {
     // light: [null, tint(0.9, baseColors.red)],
     // dark: [null, shade(0.4, baseColors.red)]
   }
-};
+}
 
-const purple = colors.purple;
-const blue = colors.blue;
-const green = colors.green;
+const purple = colors.purple
+const blue = colors.blue
+const green = colors.green
 // const yellow = colors.yellow;
-const red = colors.red;
+const red = colors.red
 
-export { purple };
-export { blue };
+export { purple }
+export { blue }
 // export { yellow };
-export { green };
-export { red };
+export { green }
+export { red }
 
-export default baseColors;
+export default baseColors
