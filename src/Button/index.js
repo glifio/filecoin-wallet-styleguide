@@ -1,26 +1,40 @@
 import React, { forwardRef } from 'react'
 import { func, bool, string } from 'prop-types'
+import { BaseButton } from '../'
 
 const Button = forwardRef(
-  ({ disabled, onClick, title, size, ...props }, ref) => (
-    <button onClick={onClick} disabled={disabled} ref={ref} {...props}>
+  ({ type, disabled, onClick, title, ...props }, ref) => (
+    <BaseButton
+      py={2}
+      px={4}
+      borderRadius={1}
+      backgroundColor={type}
+      color={type}
+      borderColor={type}
+      onClick={onClick}
+      disabled={disabled}
+      ref={ref}
+      {...props}
+    >
       {title}
-    </button>
+    </BaseButton>
   )
 )
 
 const ButtonPropTypes = {
+  primary: bool,
+  secondary: bool,
   onClick: func.isRequired,
   title: string.isRequired,
   /* @ALEX how do we want to handle this? */
-  size: string,
   disabled: bool
 }
 
 Button.propTypes = ButtonPropTypes
 
 Button.defaultProps = {
-  /* @ALEX how do we want to handle this? */
+  primary: true, //sets primary to default button
+  secondary: false
 }
 
 // We can hardcode props to make named Button exports
