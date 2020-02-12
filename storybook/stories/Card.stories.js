@@ -3,7 +3,8 @@ import {
   Box,
   Text,
   Glyph,
-  Card
+  Card,
+  Stepper
 } from '@openworklabs/filecoin-wallet-styleguide'
 
 export default {
@@ -27,11 +28,21 @@ export const OnboardingStepCard = () => (
     display="flex"
     flexDirection="column"
     justifyContent="space-between"
+    borderColor="silver"
     height={300}
   >
     <Box display="flex" alignItems="center">
       <Glyph acronym="Ld" />
-      <Text ml={3}>Step 1</Text>
+      <Stepper
+        textColor="text"
+        completedDotColor="green"
+        incompletedDotColor="silver"
+        step={1}
+        totalSteps={3}
+        ml={4}
+      >
+        Step 1
+      </Stepper>
     </Box>
     <Box display="block" mt={3}>
       <Text>
