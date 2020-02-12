@@ -14,10 +14,10 @@ const Stepper = forwardRef(
     },
     ref
   ) => (
-    <Box ref={ref} {...props}>
-      <Text>Step {step}</Text>
+    <Box display="flex" ref={ref} {...props}>
+      <Text mr={2}>Step {step}</Text>
       {new Array(totalSteps).fill(true).map((_, i) => (
-        <Box display="inline">
+        <Box display="inline-block">
           {step <= i + 1 ? (
             <Box
               display="inline-block"
