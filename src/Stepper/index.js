@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import { string, number } from 'prop-types'
+import { Text, Box } from '../'
 
 const Stepper = forwardRef(
   (
@@ -13,18 +14,32 @@ const Stepper = forwardRef(
     },
     ref
   ) => (
-    <div ref={ref} {...props}>
-      <div>Step {step}</div>
+    <Box ref={ref} {...props}>
+      <Text>Step {step}</Text>
       {new Array(totalSteps).fill(true).map((_, i) => (
-        <span>
+        <Box display="inline">
           {step <= i + 1 ? (
-            <div>Incomplete step</div>
+            <Box
+              display="inline-block"
+              width={12}
+              height={12}
+              mx={1}
+              borderRadius={100}
+              backgroundColor={incompletedDotColor}
+            ></Box>
           ) : (
-            <div>Complete step</div>
+            <Box
+              display="inline-block"
+              width={12}
+              height={12}
+              mx={1}
+              borderRadius={100}
+              backgroundColor={completedDotColor}
+            ></Box>
           )}
-        </span>
+        </Box>
       ))}
-    </div>
+    </Box>
   )
 )
 
