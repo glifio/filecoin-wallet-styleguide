@@ -19,21 +19,13 @@ export { default as BalanceCard } from './BalanceCard'
 export { default as Input } from './Input'
 export { default as Address } from './Address'
 export { default as Button } from './Button'
+export { default as BaseButton } from './Button/BaseButton'
 export { default as Stepper } from './Stepper'
 export { default as Glyph } from './Glyph'
 export { default as Box } from './Box'
 
 // typography
 export { default as Text } from './Text'
-
-//button
-export const BaseButton = styled.button`
-  ${space}
-  ${color}
-  ${layout}
-  ${border}
-  ${flexbox}
-`
 
 export const Menu = styled.ul`
   list-style: none;
