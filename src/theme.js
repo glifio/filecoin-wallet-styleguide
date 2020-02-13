@@ -29,7 +29,7 @@ const colors = {
 // theme.js
 const theme = {
   colors,
-  fontSizes: [14, 16, 20, 24, 32, 48],
+  fontSizes: [0.875, 1, 1.25, 1.5, 2, 3],
   fontWeights: [0, 400, 600, 900],
   letterSpacings: [0, 1, 2, 4, 8],
   lineHeights: {
