@@ -9,7 +9,7 @@ const colorMatcher = {
   },
   backgroundColor: {
     primary: 'success',
-    secondary: 'white'
+    secondary: 'transparent'
   },
   borderColor: {
     primary: 'success',
