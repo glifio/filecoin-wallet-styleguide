@@ -25,9 +25,6 @@ export { default as Stepper } from './Stepper'
 export { default as Glyph } from './Glyph'
 export { default as Box } from './Box'
 
-// typography
-export { default as Text } from './Text'
-
 export const Menu = styled.ul`
   list-style: none;
   margin: 0;
@@ -68,21 +65,21 @@ export const Icon = styled.span`
 //     outline: none;
 //   }
 // `
-export const Title = styled.h1`
-  margin: 0;
-  font-weight: 700;
-  color: #444;
-  ${color}
-  ${typography}
-  ${layout}
-`
+// export const Title = styled.h1`
+//   margin: 0;
+//   font-weight: 700;
+//   color: #444;
+//   ${color}
+//   ${typography}
+//   ${layout}
+// `
 
-export const Label = styled.h5`
-  margin: 0;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #444;
-  ${color}
-  ${typography}
-  ${layout}
-`
+// export const Label = styled.h5`
+//   margin: 0;
+//   text-transform: uppercase;
+//   font-weight: 600;
+//   color: #444;
+//   ${color}
+//   ${typography}
+//   ${layout}
+// `
