@@ -32,7 +32,7 @@ Glyph.propTypes = {
 }
 
 Glyph.defaultProps = {
-  color: colors.text
+  color: colors.purplelight
 }
 
 export default Glyph
