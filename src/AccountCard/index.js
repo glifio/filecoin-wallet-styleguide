@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react'
 import { string, func } from 'prop-types'
 import { ADDRESS_PROPTYPE } from '../customPropTypes'
+import { Box } from '../'
 
 /*
  @ALEX - should we consider extending the ColoredContainer component for this?
@@ -10,16 +11,16 @@ const truncate = string => `${string.slice(0, 4)}...${string.slice(-4)}`
 
 const AccountCard = forwardRef(
   ({ address, alias, color, onAccountSwitch, ...props }, ref) => (
-    <div
+    <Box
+      display="flex"
+      flexDirection="column"
+      width={11}
+      height={11}
+      borderRadius={2}
+      bg="primary"
+      boxShadow={1}
       ref={ref}
       {...props}
-      css={`
-        width: 250px;
-        height: 250px;
-        border-radius: 8px;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-        background-color: ${color};
-      `}
     >
       <div
         css={`
@@ -126,7 +127,7 @@ const AccountCard = forwardRef(
           Switch
         </button>
       </div>
-    </div>
+    </Box>
   )
 )
 
