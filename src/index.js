@@ -13,6 +13,7 @@ export { default as ThemeProvider } from './ThemeProvider'
 export { default as BaseStyles } from './BaseStyles'
 
 // components
+export { default as Container } from './Container'
 export { default as Card } from './Card'
 export { default as AccountCard } from './AccountCard'
 export { default as BalanceCard } from './BalanceCard'

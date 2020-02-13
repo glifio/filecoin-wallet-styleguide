@@ -14,7 +14,7 @@ const Card = forwardRef(({ ...props }, ref) => (
     overflow="hidden"
     ref={ref}
     {...props}
-  ></Box>
+  />
 ))
 
 const CardPropTypes = {}
