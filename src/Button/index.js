@@ -2,19 +2,9 @@ import React, { forwardRef } from 'react'
 import { func, bool, string, oneOf } from 'prop-types'
 import BaseButton from './BaseButton'
 
-const shouldShowBorder = buttonType => {
-  if (buttonType.toLowerCase() === 'primary') {
-    return false
-  } else if (buttonType.toLowerCase() === 'secondary') {
-    return true
-  } else if (buttonType.toLowerCase() === 'triangle') {
-    return true
-  }
-}
-
 const colorMatcher = {
   color: {
-    primary: 'darkGray',
+    primary: 'successtext',
     secondary: 'darkGray'
   },
   backgroundColor: {
@@ -22,8 +12,8 @@ const colorMatcher = {
     secondary: 'white'
   },
   borderColor: {
-    primary: 'darkGray',
-    secondary: 'darkGray'
+    primary: 'success',
+    secondary: 'silver'
   }
 }
 
@@ -32,7 +22,7 @@ const Button = forwardRef(
     <BaseButton
       py={2}
       px={4}
-      border={shouldShowBorder(type) ? 1 : 0}
+      border={1}
       borderRadius={1}
       backgroundColor={colorMatcher.backgroundColor[type]}
       color={colorMatcher.color[type]}
