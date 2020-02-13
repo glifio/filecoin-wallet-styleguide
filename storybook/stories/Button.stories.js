@@ -5,17 +5,18 @@ export default {
   title: 'Button'
 }
 
-export const ButtonBase = () => (
-  <Button title="Button Base" onClick={e => console.log(e.target.value)} />
-)
-
 export const Primary = () => (
-  <Button.Primary title="Primary" onClick={e => console.log(e.target.value)} />
+  <Button
+    title="Primary Button"
+    type="primary"
+    onClick={e => console.log(e.target.value)}
+  />
 )
 
 export const Secondary = () => (
-  <Button.Secondary
-    title="Secondary"
+  <Button
+    title="Secondary Button"
+    type="secondary"
     onClick={e => console.log(e.target.value)}
   />
 )

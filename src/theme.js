@@ -19,6 +19,7 @@ const colors = {
   white: '#fff',
   transparent: 'transparent',
   success: green.base,
+  successtext: green.text,
   // warning: yellow.base - do we need this?
   error: red.base
   // info: blue.base - do we need this?
@@ -50,7 +51,7 @@ const theme = {
   heights: [0, 16, 32, 48, 64, 128, 256],
   minHeights: [0, 16, 32, 64, 128, 256],
   maxHeights: [0, 16, 32, 64, 128, 256],
-  borders: [0, `4px solid`],
+  borders: [0, `1px solid`, `4px solid`],
   borderStyles: ['solid'],
   borderWidths: ['0', '1px', '2px', '4px'],
   breakpoints: ['40em', '52em', '64em'],

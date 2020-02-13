@@ -1,34 +1,54 @@
 import React, { forwardRef } from 'react'
-import { func, bool, string } from 'prop-types'
+import { func, bool, string, oneOf } from 'prop-types'
+import BaseButton from './BaseButton'
+
+const colorMatcher = {
+  color: {
+    primary: 'successtext',
+    secondary: 'darkGray'
+  },
+  backgroundColor: {
+    primary: 'success',
+    secondary: 'white'
+  },
+  borderColor: {
+    primary: 'success',
+    secondary: 'silver'
+  }
+}
 
 const Button = forwardRef(
-  ({ disabled, onClick, title, size, ...props }, ref) => (
-    <button onClick={onClick} disabled={disabled} ref={ref} {...props}>
+  ({ type, disabled, onClick, title, ...props }, ref) => (
+    <BaseButton
+      py={2}
+      px={4}
+      border={1}
+      borderRadius={1}
+      backgroundColor={colorMatcher.backgroundColor[type]}
+      color={colorMatcher.color[type]}
+      borderColor={colorMatcher.borderColor[type]}
+      onClick={onClick}
+      disabled={disabled}
+      ref={ref}
+      {...props}
+    >
       {title}
-    </button>
+    </BaseButton>
   )
 )
 
 const ButtonPropTypes = {
+  type: oneOf(['primary', 'secondary']),
   onClick: func.isRequired,
   title: string.isRequired,
   /* @ALEX how do we want to handle this? */
-  size: string,
   disabled: bool
 }
 
 Button.propTypes = ButtonPropTypes
 
 Button.defaultProps = {
-  /* @ALEX how do we want to handle this? */
+  type: 'primary'
 }
-
-// We can hardcode props to make named Button exports
-Button.Primary = ({ ...props }) => <Button {...props} />
-Button.Secondary = ({ ...props }) => <Button {...props} />
-
-Button.Primary.propTypes = ButtonPropTypes
-Button.Secondary.propTypes = ButtonPropTypes
-// ...
 
 export default Button
