@@ -29,7 +29,7 @@ const colors = {
 // theme.js
 const theme = {
   colors,
-  fontSizes: [0, 0.875, 1, 1.25, 1.5, 2, 3],
+  fontSizes: ['0rem', '0.875rem', '1rem', '1.25rem', '1.5rem', '2rem', '3rem'],
   fontWeights: [0, 400, 600, 900],
   letterSpacings: [0, 1, 2, 4, 8],
   lineHeights: {
@@ -39,32 +39,28 @@ const theme = {
   },
   textStyles: {
     bigTitle: {
-      as: 'h1',
       fontSize: [5, 6],
       fontWeight: 700,
-      lineHeight: solid,
+      lineHeight: 'solid',
       fontFamily: 'system-ui'
     },
     title: {
-      as: 'h1',
       fontSize: 5,
       fontWeight: 700,
-      lineHeight: title,
+      lineHeight: 'title',
       fontFamily: 'system-ui'
     },
     text: {
-      as: 'p',
       fontSize: 3,
       fontWeight: 400,
-      lineHeight: copy,
+      lineHeight: 'copy',
       fontFamily: 'system-ui'
     },
     label: {
-      as 'h4',
       fontSize: 1,
       fontWeight: 700,
-      textTransform: uppercase,
-      lineHeight: solid,
+      textTransform: 'uppercase',
+      lineHeight: 'solid',
       fontFamily: 'system-ui'
     }
   },

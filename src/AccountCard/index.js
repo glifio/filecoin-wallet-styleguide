@@ -1,7 +1,9 @@
 import React, { forwardRef } from 'react'
 import { string, func } from 'prop-types'
 import { ADDRESS_PROPTYPE } from '../customPropTypes'
-import { Box, Glyph, Button } from '../'
+import Box from '../Box'
+import Glyph from '../Glyph'
+import Button from '../Button'
 import { BigTitle, Text } from '../Typography'
 
 /*
@@ -37,7 +39,7 @@ const AccountCard = forwardRef(
         <Text>Account</Text>
       </Box>
       <Box color="lightpurple">
-        <BigTitle textStyle="BigTitle">{alias}</BigTitle>
+        <BigTitle>{alias}</BigTitle>
         <Text>{truncate(address)}</Text>
       </Box>
       <Box display="flex">
