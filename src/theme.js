@@ -29,13 +29,40 @@ const colors = {
 // theme.js
 const theme = {
   colors,
-  fontSizes: [14, 16, 20, 24, 32, 48],
+  fontSizes: ['0rem', '0.875rem', '1rem', '1.25rem', '1.5rem', '2rem', '3rem'],
   fontWeights: [0, 400, 600, 900],
   letterSpacings: [0, 1, 2, 4, 8],
   lineHeights: {
     solid: 1,
     title: 1.2,
     copy: 1.4
+  },
+  textStyles: {
+    bigTitle: {
+      fontSize: [5, 6],
+      fontWeight: 700,
+      lineHeight: 'solid',
+      fontFamily: 'system-ui'
+    },
+    title: {
+      fontSize: 5,
+      fontWeight: 700,
+      lineHeight: 'title',
+      fontFamily: 'system-ui'
+    },
+    text: {
+      fontSize: 3,
+      fontWeight: 400,
+      lineHeight: 'copy',
+      fontFamily: 'system-ui'
+    },
+    label: {
+      fontSize: 1,
+      fontWeight: 700,
+      textTransform: 'uppercase',
+      lineHeight: 'solid',
+      fontFamily: 'system-ui'
+    }
   },
   fonts: {
     sansSerif:

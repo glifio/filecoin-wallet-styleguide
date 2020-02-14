@@ -1,7 +1,10 @@
 import React, { forwardRef } from 'react'
 import { string, func } from 'prop-types'
 import { ADDRESS_PROPTYPE } from '../customPropTypes'
-import { Box, Glyph, Button, Text } from '../'
+import Box from '../Box'
+import Glyph from '../Glyph'
+import Button from '../Button'
+import { BigTitle, Text } from '../Typography'
 
 /*
  @ALEX - should we consider extending the ColoredContainer component for this?
@@ -36,7 +39,7 @@ const AccountCard = forwardRef(
         <Text>Account</Text>
       </Box>
       <Box color="lightpurple">
-        <Text>{alias}</Text>
+        <BigTitle>{alias}</BigTitle>
         <Text>{truncate(address)}</Text>
       </Box>
       <Box display="flex">
