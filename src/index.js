@@ -27,7 +27,7 @@ export { default as Glyph } from './Glyph'
 export { default as Box } from './Box'
 
 // typography
-export { default as Text } from './Text'
+export * from './Typography'
 
 export const Menu = styled.ul`
   list-style: none;
@@ -54,36 +54,4 @@ export const Icon = styled.span`
   ${layout}
   ${flexbox}
   ${border}
-`
-
-// export const Input = styled.input`
-
-//   ${space}
-//   ${color}
-//   ${layout}
-//   ${flexbox}
-//   ${border}
-//   ${typography}
-
-//   &:focus {
-//     outline: none;
-//   }
-// `
-export const Title = styled.h1`
-  margin: 0;
-  font-weight: 700;
-  color: #444;
-  ${color}
-  ${typography}
-  ${layout}
-`
-
-export const Label = styled.h5`
-  margin: 0;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #444;
-  ${color}
-  ${typography}
-  ${layout}
 `

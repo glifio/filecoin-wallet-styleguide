@@ -1,25 +1,50 @@
 import React, { forwardRef } from 'react'
 import { string, func, bool } from 'prop-types'
-
-/*
- @ALEX - should we consider extending the ColoredContainer component for this?
-*/
+import Box from '../Box'
+import Button from '../Button'
+import { BigTitle, Title, Label } from '../Typography'
 
 // this component will also be responsible for fetching the fiat denominated amount of the balance
 const BalanceCard = forwardRef(
   ({ balance, onSend, onReceive, disableButtons, ...props }, ref) => (
-    <div ref={ref} {...props}>
-      <p>Balance</p>
-      <p>{balance}FIL</p>
-      {/* @alex this will change to be dynamically created, for now just pretend 1 FIL = 5 USD */}
-      <p>{Number(balance) * 5}USD</p>
-      <button disabled={disableButtons} onClick={onReceive}>
-        Receive
-      </button>
-      <button disabled={disableButtons} onClick={onSend}>
-        Send
-      </button>
-    </div>
+    <Box
+      display="flex"
+      flexDirection="column"
+      justifyContent="space-between"
+      width={11}
+      height={11}
+      border={1}
+      borderRadius={2}
+      p={3}
+      color="darkgray"
+      bg="transparent"
+      ref={ref}
+      {...props}
+    >
+      <Label>Balance</Label>
+      <Box>
+        <BigTitle>{balance}FIL</BigTitle>
+        {/* @alex this will change to be dynamically created, for now just pretend 1 FIL = 5 USD */}
+        <Title>{Number(balance) * 5}USD</Title>
+      </Box>
+      <Box display="flex" justifyContent="space-between">
+        <Button
+          type="secondary"
+          title="Receive"
+          disabled={disableButtons}
+          onClick={onReceive}
+          width={120}
+        />
+        <Button
+          type="primary"
+          title="Send"
+          disabled={disableButtons}
+          onClick={onSend}
+          ml={2}
+          width={120}
+        />
+      </Box>
+    </Box>
   )
 )
 

@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
 import { string } from 'prop-types'
-import Text from '../Text'
+import { Text } from '../Typography'
 import colors from '../colors'
 import Box from '../Box'
 
@@ -32,7 +32,7 @@ Glyph.propTypes = {
 }
 
 Glyph.defaultProps = {
-  color: colors.text
+  color: colors.purplelight
 }
 
 export default Glyph

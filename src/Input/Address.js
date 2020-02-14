@@ -24,7 +24,7 @@ const Address = forwardRef(
             borderBottomRightRadius={1}
             onChange={onChange}
             value={value}
-            placeholder="t1..."
+            placeholder={placeholder}
           />
           {error && <p>{error}</p>}
         </Box>
@@ -37,11 +37,13 @@ Address.propTypes = {
   onChange: func.isRequired,
   label: string.isRequired,
   value: string,
-  error: string
+  error: string,
+  placeholder: string
 }
 
 Address.defaultProps = {
-  value: ''
+  value: '',
+  placeholder: 'f1...'
 }
 
 export default Address

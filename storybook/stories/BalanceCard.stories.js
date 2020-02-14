@@ -14,7 +14,6 @@ export const EnabledButtons = () => (
     onReceive={() => {
       console.log('receiving')
     }}
-    disableButtons={false}
   />
 )
 
