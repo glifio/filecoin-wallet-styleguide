@@ -1,7 +1,8 @@
 import React, { forwardRef } from 'react'
 import { func, string } from 'prop-types'
 import InputWrapper from './InputWrapper'
-import { Box, Input } from '../'
+import BaseInput from './BaseInput'
+import { Box } from '../'
 
 const Address = forwardRef(
   ({ onChange, value, placeholder, label, error, ...props }, ref) => {
@@ -13,27 +14,14 @@ const Address = forwardRef(
             {label}
           </Box>
           {/* how do we chunk the address in the input component? */}
-          <input
-            css={`
-              display: inline-block;
-              padding: 0.875rem 0.5rem;
-              border: 0;
-              border-radius: 4px;
-              border-left: 1px solid;
-              border-top-left-radius: 0px;
-              border-bottom-left-radius: 0px;
-              transition: 0.2s ease-in-out;
-
-              &:hover {
-                background: #f5f5f5;
-              }
-
-              &:focus {
-                box-shadow: 0;
-                outline: 0;
-                background: #f5f5f5;
-              }
-            `}
+          <BaseInput
+            display="inline-block"
+            py={3}
+            px={3}
+            border={0}
+            borderLeft={1}
+            borderTopRightRadius={1}
+            borderBottomRightRadius={1}
             onChange={onChange}
             value={value}
             placeholder="t1..."
