@@ -4,7 +4,8 @@ import { purple, green, red } from './colors'
 const colors = {
   text: '#262626',
   background: '#F6F8FE',
-  primary: purple.base,
+  purple: purple.base,
+  lightpurple: purple.text,
   // 'primary-light': purple.light[1],
   // 'primary-dark': purple.dark[1],
   black: '#000',
@@ -28,13 +29,40 @@ const colors = {
 // theme.js
 const theme = {
   colors,
-  fontSizes: [14, 16, 20, 24, 32, 48],
+  fontSizes: ['0rem', '0.875rem', '1rem', '1.25rem', '1.5rem', '2rem', '3rem'],
   fontWeights: [0, 400, 600, 900],
   letterSpacings: [0, 1, 2, 4, 8],
   lineHeights: {
     solid: 1,
     title: 1.2,
     copy: 1.4
+  },
+  textStyles: {
+    bigTitle: {
+      fontSize: [5, 6],
+      fontWeight: 700,
+      lineHeight: 'solid',
+      fontFamily: 'system-ui'
+    },
+    title: {
+      fontSize: 5,
+      fontWeight: 700,
+      lineHeight: 'title',
+      fontFamily: 'system-ui'
+    },
+    text: {
+      fontSize: 3,
+      fontWeight: 400,
+      lineHeight: 'copy',
+      fontFamily: 'system-ui'
+    },
+    label: {
+      fontSize: 1,
+      fontWeight: 700,
+      textTransform: 'uppercase',
+      lineHeight: 'solid',
+      fontFamily: 'system-ui'
+    }
   },
   fonts: {
     sansSerif:
@@ -43,12 +71,12 @@ const theme = {
       '"system-ui", "Segoe UI", Roboto Mono, Helvetica, Arial, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";'
   },
   space: [0, 4, 8, 16, 24, 32, 48, 64, 128, 256],
-  sizes: [0, 4, 8, 16, 24, 32, 48, 64, 80],
+  sizes: [0, 4, 8, 16, 24, 32, 48, 64, 80, 120, 240, 300, 480],
   radii: ['0', '4px', '8px', '16px', '32px'],
-  width: [0, 16, 32, 48, 64, 128, 256],
+  // width: [0, 16, 32, 48, 64, 128, 256],
   minWidths: [0, 16, 32, 64, 128, 256],
   maxWidths: [0, 16, 32, 64, 128, 256, 512, 768, 1024, 1536],
-  heights: [0, 16, 32, 48, 64, 128, 256],
+  // heights: [0, 16, 32, 48, 64, 128, 256],
   minHeights: [0, 16, 32, 64, 128, 256],
   maxHeights: [0, 16, 32, 64, 128, 256],
   borders: [0, `1px solid`, `4px solid`],
@@ -58,9 +86,7 @@ const theme = {
   // Alex, Todo - Use SmoothShadow https://css-tricks.com/make-a-smooth-shadow-friend/
   shadows: [
     '0',
-    '0px 2px 4px rgba(0, 0, 0, 0.1)',
-    '0px 8px 16px rgba(0, 0, 0, 0.1)',
-    '0 7px 14px rgba(50,50,93,.1)'
+    '0 0.9px 9px rgba(0, 0, 0, 0.017), 0 2.2px 18.6px rgba(0, 0, 0, 0.027),0 4.1px 29.7px rgba(0, 0, 0, 0.034),0 7.4px 45.2px rgba(0, 0, 0, 0.041),0 13.8px 73.1px rgba(0, 0, 0, 0.051), 0 33px 160px rgba(0, 0, 0, 0.07)'
   ],
   opacity: {
     disabled: 0.4
