@@ -1,12 +1,8 @@
 import React, { forwardRef } from 'react'
 import { string, func, bool } from 'prop-types'
-import { Box, Button } from '../'
-// To be commented in when the 'updatedTextStyles' branch gets merged into this one
-// import { BigTitle, Title, Label } from '../Typography'
-
-/*
- @ALEX - should we consider extending the ColoredContainer component for this?
-*/
+import Box from '../Box'
+import Button from '../Button'
+import { BigTitle, Title, Label } from '../Typography'
 
 // this component will also be responsible for fetching the fiat denominated amount of the balance
 const BalanceCard = forwardRef(
@@ -25,11 +21,11 @@ const BalanceCard = forwardRef(
       ref={ref}
       {...props}
     >
-      <h4>Balance</h4>
+      <Label>Balance</Label>
       <Box>
-        <h1>{balance}FIL</h1>
+        <BigTitle>{balance}FIL</BigTitle>
         {/* @alex this will change to be dynamically created, for now just pretend 1 FIL = 5 USD */}
-        <h2>{Number(balance) * 5}USD</h2>
+        <Title>{Number(balance) * 5}USD</Title>
       </Box>
       <Box display="flex" justifyContent="space-between">
         <Button
@@ -38,7 +34,7 @@ const BalanceCard = forwardRef(
           disabled={disableButtons}
           onClick={onReceive}
           width={120}
-        ></Button>
+        />
         <Button
           type="primary"
           title="Send"
@@ -46,7 +42,7 @@ const BalanceCard = forwardRef(
           onClick={onSend}
           ml={2}
           width={120}
-        ></Button>
+        />
       </Box>
     </Box>
   )
