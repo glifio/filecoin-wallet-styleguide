@@ -1,7 +1,8 @@
 import React, { useState, forwardRef } from 'react'
 import { func, string, shape } from 'prop-types'
 import { Box } from '../'
-import { Text } from '../Typography'
+import BaseInput from './BaseInput'
+import { Text, Title } from '../Typography'
 
 const Funds = forwardRef(
   ({ onChange, value, placeholder, error, ...props }, ref) => {
@@ -29,24 +30,18 @@ const Funds = forwardRef(
         {/* how do we chunk the address in the input component? */}
         <Box display="inline-block" width="280px">
           <Box display="block" height="80px" width="100%">
-            <input
-              css={`
-                height: 100%;
-                width: 100%;
-                border: 0;
-              `}
+            <BaseInput
+              height="100%"
+              width="100%"
               onChange={onChange}
               value={value}
               placeholder={placeholder}
             />
           </Box>
           <Box display="block" height="80px" width="100%" borderTop="1px solid">
-            <input
-              css={`
-                height: 100%;
-                width: 100%;
-                border: 0;
-              `}
+            <BaseInput
+              height="100%"
+              width="100%"
               onChange={onChange}
               value={value}
               placeholder={placeholder}
