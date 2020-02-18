@@ -34,6 +34,7 @@ const Funds = forwardRef(
             <BaseInput
               height="100%"
               width="100%"
+              border="0"
               onChange={onChange}
               value={value}
               placeholder={placeholder}
@@ -44,6 +45,7 @@ const Funds = forwardRef(
             <BaseInput
               height="100%"
               width="100%"
+              border="0"
               onChange={onChange}
               value={value}
               placeholder={placeholder}
