@@ -6,8 +6,6 @@ const colors = {
   background: '#F6F8FE',
   purple: purple.base,
   lightpurple: purple.text,
-  // 'primary-light': purple.light[1],
-  // 'primary-dark': purple.dark[1],
   black: '#000',
   nearBlack: '#111',
   darkGray: '#333',
@@ -23,13 +21,11 @@ const colors = {
     base: green.base,
     text: green.text
   },
-  // warning: yellow.base - do we need this?
   error: {
     base: red.base,
     textLight: red.textLight,
     textDark: red.textDark
   }
-  // info: blue.base - do we need this?
 }
 
 // theme.js

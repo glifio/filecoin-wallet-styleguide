@@ -4,15 +4,15 @@ import BaseButton from './BaseButton'
 
 const colorMatcher = {
   color: {
-    primary: 'successtext',
+    primary: 'success.text',
     secondary: 'darkGray'
   },
   backgroundColor: {
-    primary: 'success',
+    primary: 'success.base',
     secondary: 'transparent'
   },
   borderColor: {
-    primary: 'success',
+    primary: 'success.base',
     secondary: 'silver'
   }
 }
@@ -23,7 +23,7 @@ const Button = forwardRef(
       py={2}
       px={4}
       border={1}
-      borderRadius={1}
+      borderRadius={2}
       backgroundColor={colorMatcher.backgroundColor[type]}
       color={colorMatcher.color[type]}
       borderColor={colorMatcher.borderColor[type]}
