@@ -1,9 +1,9 @@
 import Address from './Address'
 import Funds from './Funds'
-import TextInput from './Text'
+import Text from './Text'
 
 export default {
   Address,
   Funds,
-  TextInput
+  Text
 }
