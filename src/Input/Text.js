@@ -4,7 +4,7 @@ import { space, color, layout, border, flexbox } from 'styled-system'
 import { func, string } from 'prop-types'
 import BaseInput from './BaseInput'
 import Box from '../Box'
-// import { Text } from '../Typography'
+import { Label } from '../Typography'
 
 //input wrapper
 const TextInputWrapper = styled.div`
@@ -41,7 +41,7 @@ const TextInput = ({ onChange, value, placeholder, label, error }) => (
         />
       </Box>
     </TextInputWrapper>
-    {error && <p my={0}>{error}</p>}
+    {error && <Label color="error.textLight">{error}</Label>}
   </>
 )
 
