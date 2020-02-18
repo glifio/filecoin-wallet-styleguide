@@ -13,6 +13,7 @@ const Funds = forwardRef(
         maxWidth="480px"
         minHeight="160px"
         border={1}
+        borderRadius={1}
         ref={ref}
         {...props}
       >
@@ -38,6 +39,7 @@ const Funds = forwardRef(
               placeholder={placeholder}
             />
           </Box>
+          {/* This would be the Fiat conversion / input */}
           <Box display="block" height="80px" width="100%" borderTop="1px solid">
             <BaseInput
               height="100%"
