@@ -39,14 +39,16 @@ const theme = {
   },
   textStyles: {
     bigTitle: {
-      fontSize: [5, 6],
+      fontSize: [5, 6, 6],
       fontWeight: 700,
+      margin: 0,
       lineHeight: 'solid',
       fontFamily: 'system-ui'
     },
     title: {
       fontSize: 5,
       fontWeight: 700,
+      margin: 0,
       lineHeight: 'title',
       fontFamily: 'system-ui'
     },
