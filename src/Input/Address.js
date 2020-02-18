@@ -4,7 +4,6 @@ import TextInput from './Text'
 
 const Address = forwardRef(
   ({ onChange, value, placeholder, label, error, ...props }, ref) => {
-    // TODO: address validation occurs here @jon
     return (
       <TextInput
         ref={ref}

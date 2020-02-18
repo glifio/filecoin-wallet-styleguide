@@ -1,5 +1,4 @@
 import React, { forwardRef } from 'react'
-import { func, bool, string } from 'prop-types'
 import Box from '../Box'
 
 const Card = forwardRef(({ ...props }, ref) => (
@@ -16,13 +15,5 @@ const Card = forwardRef(({ ...props }, ref) => (
     {...props}
   />
 ))
-
-const CardPropTypes = {}
-
-Card.propTypes = CardPropTypes
-
-Card.defaultProps = {
-  /* @ALEX how do we want to handle this? */
-}
 
 export default Card

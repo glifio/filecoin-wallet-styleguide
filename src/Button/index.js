@@ -41,7 +41,6 @@ const ButtonPropTypes = {
   type: oneOf(['primary', 'secondary']),
   onClick: func.isRequired,
   title: string.isRequired,
-  /* @ALEX how do we want to handle this? */
   disabled: bool
 }
 

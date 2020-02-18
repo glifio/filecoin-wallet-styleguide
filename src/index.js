@@ -1,12 +1,5 @@
 import styled from 'styled-components'
-import {
-  color,
-  typography,
-  border,
-  layout,
-  space,
-  flexbox
-} from 'styled-system'
+import { color, border, layout, space, flexbox } from 'styled-system'
 
 export { default as theme } from './theme'
 export { default as ThemeProvider } from './ThemeProvider'
@@ -17,7 +10,6 @@ export { default as Container } from './Container'
 export { default as Card } from './Card'
 export { default as AccountCard } from './AccountCard'
 export { default as BalanceCard } from './BalanceCard'
-export { default as InputWrapper } from './Input/InputWrapper'
 export { default as Input } from './Input'
 export { default as Address } from './Address'
 export { default as Button } from './Button'

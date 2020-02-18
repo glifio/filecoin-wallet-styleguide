@@ -6,10 +6,6 @@ import Glyph from '../Glyph'
 import Button from '../Button'
 import { BigTitle, Text } from '../Typography'
 
-/*
- @ALEX - should we consider extending the ColoredContainer component for this?
-*/
-
 const truncate = string => `${string.slice(0, 4)}...${string.slice(-4)}`
 
 const AccountCard = forwardRef(
@@ -34,7 +30,7 @@ const AccountCard = forwardRef(
         justifyContent="flex-start"
         color="lightpurple"
       >
-        <Glyph mr={3} color="lightpurple" acronym="Ac"></Glyph>
+        <Glyph mr={3} color="lightpurple" acronym="Ac" />
         <Text>Account</Text>
       </Box>
       <Box color="lightpurple">

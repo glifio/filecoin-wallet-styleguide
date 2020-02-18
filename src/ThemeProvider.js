@@ -12,11 +12,13 @@ const ThemeProvider = ({ children, theme, ...rest }) => {
 }
 
 ThemeProvider.propTypes = {
-  theme: PropTypes.object
+  theme: PropTypes.object,
+  children: PropTypes.node
 }
 
 ThemeProvider.defaultProps = {
-  theme
+  theme,
+  children: <></>
 }
 
 ThemeProvider.displayName = 'ThemeProvider'

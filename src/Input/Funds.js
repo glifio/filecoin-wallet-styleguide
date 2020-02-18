@@ -1,12 +1,11 @@
-import React, { useState, forwardRef } from 'react'
-import { func, string, shape } from 'prop-types'
+import React, { forwardRef } from 'react'
+import { func, string } from 'prop-types'
 import Box from '../Box'
 import BaseInput from './BaseInput'
-import { Text, Title } from '../Typography'
+import { Text } from '../Typography'
 
 const Funds = forwardRef(
   ({ onChange, value, placeholder, error, ...props }, ref) => {
-    // TODO: conversion between rates
     return (
       <Box
         display="flex"
@@ -28,7 +27,6 @@ const Funds = forwardRef(
         >
           <Text>Amount</Text>
         </Box>
-        {/* how do we chunk the address in the input component? */}
         <Box display="inline-block" width="280px">
           <Box display="block" height="80px" width="100%">
             <BaseInput
@@ -40,7 +38,6 @@ const Funds = forwardRef(
               placeholder={placeholder}
             />
           </Box>
-          {/* This would be the Fiat conversion / input */}
           <Box display="block" height="80px" width="100%" borderTop="1px solid">
             <BaseInput
               height="100%"

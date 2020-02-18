@@ -6,7 +6,6 @@ import BaseInput from './BaseInput'
 import Box from '../Box'
 import { Label } from '../Typography'
 
-//input wrapper
 const TextInputWrapper = styled.div`
   display: inline-block;
   border: ${props => props.theme.borders[1]};
@@ -30,7 +29,7 @@ const TextInput = ({ onChange, value, placeholder, label, error }) => (
           display="inline-block"
           py={3}
           px={3}
-          height="64px"
+          height={7}
           border={0}
           borderLeft={1}
           borderTopRightRadius={1}
