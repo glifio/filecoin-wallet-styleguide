@@ -44,7 +44,7 @@ const TextBase = styled.p`
 
 export const Text = forwardRef((props, ref) => {
   return (
-    <TextBase ref={ref} {...theme.textStyles.text}>
+    <TextBase {...props} ref={ref} {...theme.textStyles.text}>
       {props.children}
     </TextBase>
   )

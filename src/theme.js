@@ -19,10 +19,16 @@ const colors = {
   'near-white': '#f4f4f4',
   white: '#fff',
   transparent: 'transparent',
-  success: green.base,
-  successtext: green.text,
+  success: {
+    base: green.base,
+    text: green.text
+  },
   // warning: yellow.base - do we need this?
-  error: red.base
+  error: {
+    base: red.base,
+    textLight: red.textLight,
+    textDark: red.textDark
+  }
   // info: blue.base - do we need this?
 }
 
@@ -74,7 +80,7 @@ const theme = {
   },
   space: [0, 4, 8, 16, 24, 32, 48, 64, 128, 256],
   sizes: [0, 4, 8, 16, 24, 32, 48, 64, 80, 120, 240, 300, 480],
-  radii: ['0', '4px', '8px', '16px', '32px'],
+  radii: ['0', '1px', '4px', '8px', '16px', '32px'],
   // width: [0, 16, 32, 48, 64, 128, 256],
   minWidths: [0, 16, 32, 64, 128, 256],
   maxWidths: [0, 16, 32, 64, 128, 256, 512, 768, 1024, 1536],

@@ -1,15 +1,51 @@
 import React from 'react'
+import styled from 'styled-components'
+import { space, color, layout, border, flexbox } from 'styled-system'
 import { func, string } from 'prop-types'
+import BaseInput from './BaseInput'
+import Box from '../Box'
+import { Label } from '../Typography'
 
-const Text = ({ onChange, value, placeholder, label, error }) => (
+//input wrapper
+const TextInputWrapper = styled.div`
+  display: inline-block;
+  border: ${props => props.theme.borders[1]};
+  border-radius: ${props => props.theme.radii[1]};
+  ${color} 
+  ${space} 
+  ${layout}
+  ${border}
+  ${flexbox};
+`
+
+const TextInput = ({ onChange, value, placeholder, label, error }) => (
   <>
-    <div>{label}</div>
-    <input onChange={onChange} value={value} placeholder={placeholder} />
-    {error && <p>{error}</p>}
+    <TextInputWrapper>
+      <Box>
+        <Box display="inline-block" px={3} minWidth="64px" textAlign="center">
+          {label}
+        </Box>
+        {/* how do we chunk the address in the input component? */}
+        <BaseInput
+          display="inline-block"
+          py={3}
+          px={3}
+          height="64px"
+          border={0}
+          borderLeft={1}
+          borderTopRightRadius={1}
+          borderBottomRightRadius={1}
+          onChange={onChange}
+          value={value}
+          placeholder={placeholder}
+        />
+      </Box>
+    </TextInputWrapper>
+    {error && <Label color="error.textLight">{error}</Label>}
   </>
 )
 
-Text.propTypes = {
+TextInput.propTypes = {
   onChange: func.isRequired,
   label: string.isRequired,
   value: string,
@@ -17,8 +53,8 @@ Text.propTypes = {
   error: string
 }
 
-Text.defaultProps = {
+TextInput.defaultProps = {
   value: ''
 }
 
-export default Text
+export default TextInput

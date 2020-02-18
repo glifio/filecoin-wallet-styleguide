@@ -39,7 +39,8 @@ const colors = {
   },
   red: {
     base: baseColors.red,
-    text: '#520000'
+    textLight: '#F96C6C',
+    textDark: '#520000'
     // light: [null, tint(0.9, baseColors.red)],
     // dark: [null, shade(0.4, baseColors.red)]
   }

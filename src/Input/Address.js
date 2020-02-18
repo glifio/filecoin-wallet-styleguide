@@ -1,26 +1,20 @@
 import React, { forwardRef } from 'react'
 import { func, string } from 'prop-types'
-import { Box, Input } from '../'
+import TextInput from './Text'
 
 const Address = forwardRef(
   ({ onChange, value, placeholder, label, error, ...props }, ref) => {
     // TODO: address validation occurs here @jon
     return (
-      <Box
-        display="inline-block"
-        alignContent="center"
-        border={1}
-        borderRadius={1}
+      <TextInput
         ref={ref}
         {...props}
-      >
-        <Box display="inline-block" mx={3}>
-          {label}
-        </Box>
-        {/* how do we chunk the address in the input component? */}
-        <input onChange={onChange} value={value} placeholder="t1..." />
-        {error && <p>{error}</p>}
-      </Box>
+        label={label}
+        onChange={onChange}
+        value={value}
+        placeholder={placeholder}
+        error={error}
+      />
     )
   }
 )
@@ -29,11 +23,13 @@ Address.propTypes = {
   onChange: func.isRequired,
   label: string.isRequired,
   value: string,
-  error: string
+  error: string,
+  placeholder: string
 }
 
 Address.defaultProps = {
-  value: ''
+  value: '',
+  placeholder: 'f1...'
 }
 
 export default Address
