@@ -19,10 +19,16 @@ const colors = {
   'near-white': '#f4f4f4',
   white: '#fff',
   transparent: 'transparent',
-  success: green.base,
-  successtext: green.text,
+  success: {
+    base: green.base,
+    text: green.text
+  },
   // warning: yellow.base - do we need this?
-  error: red.base
+  error: {
+    base: red.base,
+    textLight: red.textLight,
+    textDark: red.textDark
+  }
   // info: blue.base - do we need this?
 }
 
