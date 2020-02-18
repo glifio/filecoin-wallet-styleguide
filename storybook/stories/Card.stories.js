@@ -70,3 +70,22 @@ export const OnboardingHelperCard = () => (
     </Box>
   </Card>
 )
+
+export const ErrorCard = () => (
+  <Card
+    display="flex"
+    flexDirection="column"
+    justifyContent="space-between"
+    borderColor="silver"
+    backgroundColor="error.base"
+    height={300}
+  >
+    <Box display="flex" alignItems="center">
+      <Title>Oops!</Title>
+    </Box>
+    <Box>
+      <Text mb={2}>It looks like your Ledger is still locked.</Text>
+      <Text>Please unlock your Ledger and try again.</Text>
+    </Box>
+  </Card>
+)
