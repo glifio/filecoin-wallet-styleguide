@@ -1,9 +1,9 @@
 import React from 'react'
+import styled from 'styled-components'
+import { space, color, layout, border, flexbox } from 'styled-system'
 import { func, string } from 'prop-types'
 import BaseInput from './BaseInput'
 import Box from '../Box'
-import styled from 'styled-components'
-import { space, color, layout, border, flexbox } from 'styled-system'
 
 //input wrapper
 const TextInputWrapper = styled.div`
@@ -37,8 +37,8 @@ const Text = ({ onChange, value, placeholder, label, error }) => (
           value={value}
           placeholder={placeholder}
         />
-        {error && <p>{error}</p>}
       </Box>
+      {error && <p my={0}>{error}</p>}
     </TextInputWrapper>
   </>
 )
