@@ -25,7 +25,7 @@ export const TextWithError = () => {
       value={value}
       label="A text label"
       placeholder="A text input"
-      error="naht today junior!"
+      error="Invalid Address. Please try again."
     />
   )
 }
