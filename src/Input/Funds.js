@@ -1,6 +1,6 @@
 import React, { useState, forwardRef } from 'react'
 import { func, string, shape } from 'prop-types'
-import { Box } from '../'
+import Box from '../Box'
 import BaseInput from './BaseInput'
 import { Text, Title } from '../Typography'
 
