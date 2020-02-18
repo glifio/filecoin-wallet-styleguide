@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
 import { func, string } from 'prop-types'
-import TextInput from './TextInput'
+import TextInput from './Text'
 
 const Address = forwardRef(
   ({ onChange, value, placeholder, label, error, ...props }, ref) => {
