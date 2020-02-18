@@ -31,16 +31,15 @@ const AccountCard = forwardRef(
       <Box
         display="flex"
         alignItems="center"
-        justifyContent="space-between"
+        justifyContent="flex-start"
         color="lightpurple"
-        maxWidth={160}
       >
-        <Glyph color="lightpurple" acronym="Ac"></Glyph>
+        <Glyph mr={3} color="lightpurple" acronym="Ac"></Glyph>
         <Text>Account</Text>
       </Box>
       <Box color="lightpurple">
         <BigTitle>{alias}</BigTitle>
-        <Text>{truncate(address)}</Text>
+        <Text margin={0}>{truncate(address)}</Text>
       </Box>
       <Box display="flex">
         <Button
