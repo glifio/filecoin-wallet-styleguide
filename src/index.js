@@ -17,6 +17,10 @@ export { default as BaseButton } from './Button/BaseButton'
 export { default as Stepper } from './Stepper'
 export { default as Glyph } from './Glyph'
 export { default as Box } from './Box'
+export { default as MessageHistoryRow } from './MessageHistoryTable/MessageHistoryRow'
+export { default as MessageHistoryTable } from './MessageHistoryTable'
+export { default as Menu } from './Menu'
+export { default as MenuItem } from './Menu'
 
 // typography
 export * from './Typography'
