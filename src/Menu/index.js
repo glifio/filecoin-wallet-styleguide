@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { space, color, layout, border, flexbox } from 'styled-system'
 
 export const Menu = styled.ul`
   list-style: none;

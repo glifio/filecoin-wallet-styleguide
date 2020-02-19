@@ -1,10 +1,18 @@
 import React from 'react'
 import { MESSAGE_PROPS } from '../customPropTypes'
-import { Box } from '../Box'
+import Box from '../Box'
 import { Menu, MenuItem } from '../Menu'
 import { Text, Label } from '../Typography'
 
-const MessageRow = ({ to, from, value, gasprice, gas_used, cid, status }) => {
+const MessageHistoryRow = ({
+  to,
+  from,
+  value,
+  gasprice,
+  gas_used,
+  cid,
+  status
+}) => {
   return (
     <Box>
       <Menu>
@@ -35,6 +43,6 @@ const MessageRow = ({ to, from, value, gasprice, gas_used, cid, status }) => {
   )
 }
 
-MessageRow.propTypes = MESSAGE_PROPS
+MessageHistoryRow.propTypes = MESSAGE_PROPS
 
-export default MessageRow
+export default MessageHistoryRow
