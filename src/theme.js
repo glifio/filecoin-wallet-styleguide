@@ -55,13 +55,13 @@ const theme = {
       fontFamily: 'system-ui'
     },
     text: {
-      fontSize: 3,
+      fontSize: 2,
       fontWeight: 400,
       lineHeight: 'copy',
       fontFamily: 'system-ui'
     },
     label: {
-      fontSize: 1,
+      fontSize: 2,
       fontWeight: 700,
       textTransform: 'uppercase',
       lineHeight: 'solid',
