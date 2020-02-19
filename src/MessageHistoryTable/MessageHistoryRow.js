@@ -14,31 +14,42 @@ const MessageHistoryRow = ({
   status
 }) => {
   return (
-    <Box>
+    <Box display="flex" border={1} p={2} justifyContent="space-between">
       <Menu>
-        <MenuItem>
-          <Text>{status}</Text>
-        </MenuItem>
-        <MenuItem>
-          <Label>Date</Label>
+        <MenuItem display="flex" flexDirection="row">
+          <Menu display="flex" flexDirection="column">
+            <MenuItem>
+              <Text m={0}>{status}</Text>
+            </MenuItem>
+            <MenuItem>
+              <Label my={2}>Date</Label>
+            </MenuItem>
+          </Menu>
+          <Menu display="flex" flex-wrap="wrap" mx={3}>
+            <MenuItem overflow="hidden" maxWidth={120}>
+              <Text my={0}>To</Text>
+              <Text my={2}>
+                {to}
+                {from}
+              </Text>
+            </MenuItem>
+            {/* <MenuItem>
+          <Label>{cid}</Label>
+        </MenuItem> */}
+          </Menu>
         </MenuItem>
       </Menu>
-      <Menu>
-        <MenuItem>
-          <Text>
-            {to}
-            {from}
+      <Menu display="flex" flexDirection="column" flex-wrap="wrap">
+        <MenuItem display="flex">
+          <Text my={0}>{value}</Text>
+          <Text my={0} ml={2}>
+            FIL
           </Text>
         </MenuItem>
         <MenuItem>
-          <Label>{cid}</Label>
+          <Text my={2}>fiat</Text>
         </MenuItem>
       </Menu>
-      <Menu>
-        <MenuItem>{value}</MenuItem>
-        <MenuItem>fiat</MenuItem>
-      </Menu>
-      All the things
     </Box>
   )
 }
