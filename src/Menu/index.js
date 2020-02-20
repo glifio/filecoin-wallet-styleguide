@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { space, color, layout, border, flexbox } from 'styled-system'
+import { space, color, layout, border, flexbox, grid } from 'styled-system'
 
 export const Menu = styled.ul`
   list-style: none;
@@ -10,6 +10,7 @@ export const Menu = styled.ul`
   ${layout}
   ${border}
   ${flexbox}
+  ${grid}
 `
 
 export const MenuItem = styled.li`
@@ -17,4 +18,6 @@ export const MenuItem = styled.li`
   ${color}
   ${layout}
   ${flexbox}
+  ${grid}
+
 `
