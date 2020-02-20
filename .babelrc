@@ -4,8 +4,7 @@
     ["@babel/preset-env", { "modules": false }]
   ],
   "plugins": [
-    ["babel-plugin-styled-components", { "pure": true }],
-    ["@babel/plugin-proposal-class-properties", { "loose": true }],
-    "babel-plugin-react-docgen"
+    "@babel/plugin-transform-runtime",
+    ["babel-plugin-styled-components", { "ssr": true, "pure": true }]
   ]
 }

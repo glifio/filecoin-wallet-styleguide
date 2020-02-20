@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import FilecoinNumber from '@openworklabs/filecoin-number'
+import { FilecoinNumber } from '@openworklabs/filecoin-number'
 import { Input } from '@openworklabs/filecoin-wallet-styleguide'
 
 export default {
