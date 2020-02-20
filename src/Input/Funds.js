@@ -128,7 +128,7 @@ const Funds = forwardRef(
               value={formatFilValue(filAmount)}
               placeholder="0 FIL"
               type="number"
-              step=".000000000000000001"
+              step={new FilecoinNumber('1', 'attofil').toFil()}
             />
           </Box>
           <Box display="block" height="80px" width="100%" borderTop="1px solid">
@@ -152,7 +152,7 @@ const Funds = forwardRef(
               value={formatFiatValue(fiatAmount)}
               placeholder="0 USD"
               type="number"
-              step=".000000000000000001"
+              step={new FilecoinNumber('1', 'attofil').toFil()}
               min="0"
             />
           </Box>
