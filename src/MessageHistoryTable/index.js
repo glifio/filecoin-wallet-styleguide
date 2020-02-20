@@ -6,11 +6,10 @@ import MessageHistoryRow from './MessageHistoryRow'
 
 const MessageHistoryTable = forwardRef(
   ({ address, messages, ...props }, ref) => {
-    console.log(Array.isArray(messages))
     return (
       <div ref={ref} {...props}>
         {messages.map(msg => (
-          <MessageHistoryRow key={msg.cid} {...msg} />
+          <MessageHistoryRow address={address} key={msg.cid} {...msg} />
         ))}
       </div>
     )

@@ -20,10 +20,34 @@ const messages = [
     gas_used: 196
   },
   {
-    cid: 'bafy2bzaceaxnjvbobj4kic7fqloov2apfna6t2kd23whq3p3qjjgx33atwj2w',
-    from:
+    cid: 'bafy2bzaceamz3qggtumnbqkgyldhga54y3zakvrt2deuedwkz7fk5nrsmasrs',
+    from: 't1jdlfl73voaiblrvn2yfivvn5ifucwwv5f26nfza',
+    to:
       't3wjxuftije2evjmzo2yoy5ghfe2o42mavrpmwuzooghzcxdhqjdu7kn6dvkzf4ko37w7sfnnzdzstcjmeooea',
+    nonce: '23344',
+    value: '5000000000000000',
+    gasprice: '0',
+    gaslimit: '1000',
+    method: '0',
+    status: 'pending',
+    gas_used: 196
+  },
+  {
+    cid: 'bafy2bzaceabmpnqlbfgnkc6co72mhb36v37re2loikrdldlpmwharlajma2ug',
+    from: 't1hvuzpfdycc6z6mjgbiyaiojikd6wk2vwy7muuei',
     to: 't1jdlfl73voaiblrvn2yfivvn5ifucwwv5f26nfza',
+    nonce: '21349',
+    value: '5000000000000000',
+    gasprice: '0',
+    gaslimit: '1000',
+    method: '0',
+    gas_used: 196,
+    status: 'confirmed'
+  },
+  {
+    cid: 'bafy2bzaceabgvkl5rum5u7ctkwcmpo6ursryfyhgod35ewhoppyrhwrasdzty',
+    from: 't1jdlfl73voaiblrvn2yfivvn5ifucwwv5f26nfza',
+    to: 't1hvuzpfdycc6z6mjgbiyaiojikd6wk2vwy7muuei',
     nonce: '21349',
     value: '5000000000000000',
     gasprice: '0',

@@ -1,12 +1,24 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
+import styled from 'styled-components'
+import { space, color, layout, flexbox, border } from 'styled-system'
 
-export const IconSuccess = props => (
-  <svg
+const IconBase = styled.svg`
+  ${space}
+  ${color}
+  ${layout}
+  ${flexbox}
+  ${border}
+`
+
+export const IconSuccess = forwardRef((props, ref) => (
+  <IconBase
+    ref={ref}
     width="24"
     height="25"
     viewBox="0 0 24 25"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    {...props}
   >
     <mask id="path-2-inside-1" fill="white">
       <path
@@ -33,16 +45,18 @@ export const IconSuccess = props => (
       d="M17.7296 9.25774C18.0901 9.64826 18.0901 10.2814 17.7296 10.672L11.2681 17.672C10.9076 18.0625 10.3232 18.0625 9.96267 17.672L6.27036 13.672C5.90988 13.2814 5.90988 12.6483 6.27036 12.2577C6.63085 11.8672 7.21531 11.8672 7.57579 12.2577L10.6154 15.5506L16.4242 9.25774C16.7847 8.86721 17.3692 8.86721 17.7296 9.25774Z"
       fill="white"
     />
-  </svg>
-)
+  </IconBase>
+))
 
-export const IconFail = props => (
-  <svg
+export const IconFail = forwardRef((props, ref) => (
+  <IconBase
+    ref={ref}
     width="24"
     height="24"
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    {...props}
   >
     <circle cx="12" cy="12" r="12" fill="#E63838" />
     <path
@@ -51,16 +65,18 @@ export const IconFail = props => (
       d="M7.29489 15.2921C6.90442 15.6826 6.90442 16.3157 7.29489 16.7062C7.68535 17.0966 8.31842 17.0966 8.70888 16.7062L11.9994 13.4155L15.2916 16.7079C15.6821 17.0984 16.3151 17.0984 16.7056 16.7079C17.0961 16.3174 17.0961 15.6843 16.7056 15.2938L13.4134 12.0014L16.7076 8.70694C17.0981 8.31645 17.0981 7.68335 16.7076 7.29286C16.3172 6.90238 15.6841 6.90238 15.2937 7.29286L11.9994 10.5873L8.70684 7.29462C8.31638 6.90413 7.68331 6.90413 7.29285 7.29462C6.90238 7.68511 6.90238 8.31821 7.29285 8.7087L10.5854 12.0014L7.29489 15.2921Z"
       fill="white"
     />
-  </svg>
-)
+  </IconBase>
+))
 
-export const IconPending = props => (
-  <svg
+export const IconPending = forwardRef((props, ref) => (
+  <IconBase
     width="24"
     height="24"
     viewBox="0 0 24 24"
-    fill="none"
+    fill="blue"
     xmlns="http://www.w3.org/2000/svg"
+    ref={ref}
+    {...props}
   >
     <circle cx="12" cy="12" r="12" fill="#FDB221" />
     <mask id="path-3-inside-1" fill="white">
@@ -81,16 +97,18 @@ export const IconPending = props => (
       fill="white"
       mask="url(#path-3-inside-1)"
     />
-  </svg>
-)
+  </IconBase>
+))
 
-export const IconSend = props => (
-  <svg
+export const IconSend = forwardRef((props, ref) => (
+  <IconBase
     width="24"
     height="25"
     viewBox="0 0 24 25"
-    fill="none"
+    fill={props.status === 'confirmed' ? 'green' : 'yellow'}
     xmlns="http://www.w3.org/2000/svg"
+    ref={ref}
+    {...props}
   >
     <mask id="path-2-inside-1" fill="white">
       <path
@@ -115,16 +133,18 @@ export const IconSend = props => (
       d="M12.5657 7.43431C12.2533 7.12189 11.7467 7.12189 11.4343 7.43431L6.34315 12.5255C6.03073 12.8379 6.03073 13.3444 6.34315 13.6569C6.65556 13.9693 7.1621 13.9693 7.47452 13.6569L12 9.13137L16.5255 13.6569C16.8379 13.9693 17.3444 13.9693 17.6569 13.6569C17.9693 13.3444 17.9693 12.8379 17.6569 12.5255L12.5657 7.43431ZM12.8 18L12.8 8L11.2 8L11.2 18L12.8 18Z"
       fill="#F6F8FE"
     />
-  </svg>
-)
+  </IconBase>
+))
 
-export const IconReceive = props => (
-  <svg
+export const IconReceive = forwardRef((props, ref) => (
+  <IconBase
     width="24"
     height="25"
     viewBox="0 0 24 25"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    ref={ref}
+    {...props}
   >
     <mask id="path-2-inside-1" fill="white">
       <path
@@ -149,5 +169,5 @@ export const IconReceive = props => (
       d="M11.4343 18.5657C11.7467 18.8781 12.2533 18.8781 12.5657 18.5657L17.6569 13.4745C17.9693 13.1621 17.9693 12.6556 17.6569 12.3431C17.3444 12.0307 16.8379 12.0307 16.5255 12.3431L12 16.8686L7.47452 12.3431C7.1621 12.0307 6.65556 12.0307 6.34314 12.3431C6.03073 12.6556 6.03073 13.1621 6.34314 13.4745L11.4343 18.5657ZM11.2 8V18H12.8V8H11.2Z"
       fill="#F6F8FE"
     />
-  </svg>
-)
+  </IconBase>
+))

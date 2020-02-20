@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { MESSAGE_PROPS } from '../customPropTypes'
+import { bool, string } from 'prop-types'
+import { MESSAGE_PROPS, ADDRESS_PROPTYPE } from '../customPropTypes'
 import Box from '../Box'
 import { Menu, MenuItem } from '../Menu'
-import { Text, Label } from '../Typography'
+import { Text } from '../Typography'
 import { IconSend, IconReceive } from '../Icons'
 
 const MessageHistoryRowContainer = styled(Box)`
@@ -12,15 +13,49 @@ const MessageHistoryRowContainer = styled(Box)`
   }
 `
 
-const MessageHistoryRow = ({
-  to,
-  from,
-  value,
-  gasprice,
-  gas_used,
-  cid,
-  status
-}) => {
+const AddressText = ({ sentMsg, to, from }) => {
+  if (sentMsg) {
+    return (
+      <>
+        <Text my={0}>To</Text>
+        <Text mt={2} mb={0}>
+          {to}
+        </Text>
+      </>
+    )
+  }
+
+  return (
+    <>
+      <Text my={0}>From</Text>
+      <Text mt={2} mb={0}>
+        {from}
+      </Text>
+    </>
+  )
+}
+
+AddressText.propTypes = {
+  sentMsg: bool.isRequired,
+  to: ADDRESS_PROPTYPE,
+  from: ADDRESS_PROPTYPE
+}
+
+const ActionText = ({ status, sentMsg }) => {
+  if (status === 'confirmed' && sentMsg) return <Text>Sent</Text>
+  else if (status === 'confirmed') return <Text>Received</Text>
+  else if (status === 'pending' && sentMsg) return <Text>Sending</Text>
+  // an unconfirmed received  sg
+  else if (status === 'pending') return <Text>Confirming</Text>
+}
+
+ActionText.propTypes = {
+  sentMsg: bool.isRequired,
+  status: string.isRequired
+}
+
+const MessageHistoryRow = ({ address, to, from, value, status }) => {
+  const sentMsg = address === from
   return (
     <MessageHistoryRowContainer
       display="flex"
@@ -32,14 +67,16 @@ const MessageHistoryRow = ({
         <MenuItem display="flex" flexDirection="row">
           <Menu display="flex" flexDirection="column">
             <MenuItem>
-              {/* @jon - Todo - Map {status} to Icon prop color
-              <Text m={0}>{status}</Text> */}
-              <IconSend />
+              {sentMsg ? (
+                <IconSend status={status} />
+              ) : (
+                <IconReceive status={status} />
+              )}
             </MenuItem>
           </Menu>
           <Menu display="flex" flexDirection="column" ml={3}>
             <MenuItem>
-              <Text my={0}>Sending</Text>
+              <ActionText status={status} sentMsg={sentMsg} />
             </MenuItem>
             <MenuItem>
               <Text mt={2} mb={0}>
@@ -49,15 +86,8 @@ const MessageHistoryRow = ({
           </Menu>
           <Menu display="flex" flex-wrap="wrap" ml={3}>
             <MenuItem overflow="hidden" maxWidth={120}>
-              <Text my={0}>To</Text>
-              <Text mt={2} mb={0}>
-                {to}
-                {from}
-              </Text>
+              <AddressText sentMsg={sentMsg} to={to} from={from} />
             </MenuItem>
-            {/* <MenuItem>
-          <Label>{cid}</Label>
-        </MenuItem> */}
           </Menu>
         </MenuItem>
       </Menu>
@@ -75,7 +105,7 @@ const MessageHistoryRow = ({
             </MenuItem>
             <MenuItem display="flex">
               <Text mt={2} mb={0}>
-                500
+                {value}
               </Text>
             </MenuItem>
           </Menu>

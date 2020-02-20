@@ -19,15 +19,7 @@ export { default as Glyph } from './Glyph'
 export { default as Box } from './Box'
 export { default as MessageHistoryTable } from './MessageHistoryTable'
 export * from './Menu'
+export * from './Icons'
 
 // typography
 export * from './Typography'
-
-export const Icon = styled.span`
-  display: inline-block;
-  ${space}
-  ${color}
-  ${layout}
-  ${flexbox}
-  ${border}
-`
