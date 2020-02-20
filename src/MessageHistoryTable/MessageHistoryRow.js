@@ -1,9 +1,16 @@
 import React from 'react'
+import styled from 'styled-components'
 import { MESSAGE_PROPS } from '../customPropTypes'
 import Box from '../Box'
 import { Menu, MenuItem } from '../Menu'
 import { Text, Label } from '../Typography'
 import { IconSend, IconReceive } from '../Icons'
+
+const MessageHistoryRowContainer = styled(Box)`
+  &:nth-child(even) {
+    transform: translateY(-1px);
+  }
+`
 
 const MessageHistoryRow = ({
   to,
@@ -15,7 +22,12 @@ const MessageHistoryRow = ({
   status
 }) => {
   return (
-    <Box display="flex" border={1} p={2} justifyContent="space-between">
+    <MessageHistoryRowContainer
+      display="flex"
+      border={1}
+      p={2}
+      justifyContent="space-between"
+    >
       <Menu>
         <MenuItem display="flex" flexDirection="row">
           <Menu display="flex" flexDirection="column">
@@ -85,7 +97,7 @@ const MessageHistoryRow = ({
           </Menu>
         </MenuItem>
       </Menu>
-    </Box>
+    </MessageHistoryRowContainer>
   )
 }
 
