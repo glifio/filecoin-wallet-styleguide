@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import FilecoinNumber from '@openworklabs/filecoin-number'
 import { Input } from '@openworklabs/filecoin-wallet-styleguide'
 
 export default {
@@ -44,12 +45,16 @@ export const Address = () => {
 
 export const Funds = () => {
   const [value, setValue] = useState('')
+  const [error, setError] = useState('')
   return (
     <Input.Funds
-      onChange={e => setValue(e.target.value)}
+      onAmountChange={filecoinAmount => setValue(filecoinAmount)}
       value={value}
       label="AMOUNT"
       placeholder="0 FIL"
+      error={error}
+      setError={setError}
+      balance={new FilecoinNumber('1000', 'fil')}
     />
   )
 }
