@@ -1,30 +1,75 @@
 import { purple, green, red } from './colors'
 
+const baseColors = {
+  mono: {
+    black: '#000',
+    nearblack: '#262626',
+    darkgray: '#666666',
+    lightgray: '#C4C4C4',
+    silver: '#999999',
+    white: '#FFF',
+    transparent: 'transparent'
+  },
+  blue: {
+    lightest: '#F6F8FE',
+    lighter: '#EFF3FD',
+    light: '#E4EBFC',
+    mid: '#E4EBFC'
+  },
+  green: {
+    primary: '#1AD08F',
+    light: '#D2F5ED',
+    dark: '#007056'
+  },
+  red: {
+    light: '#FC6D6F',
+    dark: '#660000'
+  },
+  yellow: {
+    light: '#FFDC99',
+    deep: '#FCA703'
+  },
+  purple: {
+    light: '#E0D7FE',
+    deep: '#5E26FF'
+  }
+}
+
 // colors
 const colors = {
-  text: '#262626',
-  background: '#F6F8FE',
-  purple: purple.base,
-  lightpurple: purple.text,
-  black: '#000',
-  nearBlack: '#111',
-  darkGray: '#333',
-  midGray: '#555',
-  silver: '#999',
-  'light-silver': '#aaa',
-  'moon-gray': '#ccc',
-  'light-gray': '#eee',
-  'near-white': '#f4f4f4',
-  white: '#fff',
-  transparent: 'transparent',
-  success: {
-    base: green.base,
-    text: green.text
+  primary: baseColors.purple.deep,
+  secondary: baseColors.purple.light,
+  textstyles: {
+    title: baseColors.mono.purple.deep,
+    text: baseColors.mono.nearblack,
+    label: baseColors.mono.darkgray,
+    button: baseColors.mono.nearblack
   },
-  error: {
-    base: red.base,
-    textLight: red.textLight,
-    textDark: red.textDark
+  background: {
+    inputactive: baseColors.blue.mid,
+    input: baseColors.blue.light,
+    screen: baseColors.blue.lighter,
+    page: baseColors.blue.lightest,
+    button: {
+      primary: baseColors.green.primary,
+      secondary: baseColors.mono.transparent
+    },
+    confirmation: baseColors.green.light
+  },
+  status: {
+    success: {
+      background: baseColors.green.primary,
+      foreground: baseColors.mono.darkgray
+    },
+    pending: {
+      background: baseColors.yellow.deep,
+      foreground: baseColors.mono.darkgray
+    },
+    fail: {
+      background: baseColors.red.light,
+      foreground: baseColors.mono.darkgray
+    },
+    inactive: baseColors.mono.lightgray
   }
 }
 
@@ -49,6 +94,7 @@ const theme = {
     },
     title: {
       fontSize: 5,
+      fontColor: colors.textstyles.title,
       fontWeight: 700,
       margin: 0,
       lineHeight: 'title',
@@ -56,12 +102,14 @@ const theme = {
     },
     text: {
       fontSize: 3,
+      fontColor: colors.textstyles.text,
       fontWeight: 400,
       lineHeight: 'copy',
       fontFamily: 'system-ui'
     },
     label: {
       fontSize: 1,
+      fontColor: colors.textstyles.label,
       fontWeight: 700,
       textTransform: 'uppercase',
       lineHeight: 'solid',
