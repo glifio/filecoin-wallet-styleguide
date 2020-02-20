@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@openworklabs/filecoin-address": "0.0.3",
+    "@openworklabs/filecoin-number": "0.0.2",
     "@svgr/rollup": "^4.2.0",
     "polished": "^3.4.4",
     "styled-system": "^5.1.4"
