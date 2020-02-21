@@ -1,11 +1,89 @@
-import React, { forwardRef } from 'react'
-import { func, string } from 'prop-types'
+import React, { forwardRef, useState } from 'react'
+import { instanceOf, func, string } from 'prop-types'
+import { FilecoinNumber, BigNumber } from '@openworklabs/filecoin-number'
+
 import Box from '../Box'
-import BaseInput from './BaseInput'
+import NumberInput from './Number'
 import { Text } from '../Typography'
 
+const formatFilValue = number => {
+  if (!number) return ''
+  if (FilecoinNumber.isBigNumber(number)) return number.toFil()
+  return number
+}
+
+const formatFiatValue = number => {
+  if (!number) return ''
+  if (BigNumber.isBigNumber(number)) return number.toString()
+  return number
+}
+
+const toUSD = async amount => new FilecoinNumber(amount, 'fil').multipliedBy(5)
+const fromUSD = async amount =>
+  new FilecoinNumber(new BigNumber(amount).dividedBy(5), 'fil')
+
 const Funds = forwardRef(
-  ({ onChange, value, placeholder, error, ...props }, ref) => {
+  ({ onAmountChange, balance, error, setError, gasLimit, ...props }, ref) => {
+    const [fiatAmount, setFiatAmount] = useState('')
+    const [filAmount, setFilAmount] = useState('')
+
+    const onFiatChange = e => {
+      setError('')
+
+      // handle case where user deletes all values from text input
+      if (!e.target.value) setFiatAmount('')
+      // user entered non-numeric characters
+      else if (e.target.value && new BigNumber(e.target.value).isNaN()) {
+        setError('Must pass numbers only')
+      }
+      // when user is setting decimals
+      else if (new BigNumber(e.target.value).isEqualTo(0)) {
+        // dont use big numbers
+        setFiatAmount(e.target.value)
+      }
+      // handle number change
+      else setFiatAmount(new BigNumber(e.target.value))
+    }
+
+    const onFilChange = e => {
+      setError('')
+      // handle case where user deletes all values from text input
+      if (!e.target.value) setFilAmount('')
+      // user entered non-numeric characters
+      else if (
+        e.target.value &&
+        new FilecoinNumber(e.target.value, 'fil').isNaN()
+      ) {
+        setError('Must pass numbers only')
+      }
+      // when user is setting decimals
+      else if (new FilecoinNumber(e.target.value, 'fil').isEqualTo(0)) {
+        // dont use big numbers
+        setFilAmount(e.target.value)
+      }
+
+      // handle number change
+      else setFilAmount(new FilecoinNumber(e.target.value, 'fil'))
+    }
+
+    const checkBalance = amount => {
+      if (!amount) {
+        setError('Please enter a valid amount.')
+        return false
+      }
+      // user enters a value that's greater than their balance - gas limit
+      if (
+        amount
+          .plus(new FilecoinNumber(gasLimit, 'attofil'))
+          .isGreaterThanOrEqualTo(balance)
+      ) {
+        setError("The amount must be smaller than this account's balance")
+        return false
+      }
+
+      return true
+    }
+
     return (
       <Box
         display="flex"
@@ -25,46 +103,91 @@ const Funds = forwardRef(
           textAlign="center"
           borderRight="1px solid #444"
         >
-          <Text>Amount</Text>
+          {error ? <Text>{error}</Text> : <Text>Amount</Text>}
         </Box>
         <Box display="inline-block" width="280px">
           <Box display="block" height="80px" width="100%">
-            <BaseInput
+            <NumberInput
+              onFocus={() => {
+                setError('')
+                setFiatAmount('')
+              }}
+              onBlur={async () => {
+                const validBalance = checkBalance(filAmount)
+                if (validBalance) {
+                  const fiatAmount = await toUSD(filAmount)
+                  setFiatAmount(fiatAmount)
+                  onAmountChange(filAmount)
+                }
+              }}
               height="100%"
               width="100%"
               border="0"
-              onChange={onChange}
-              value={value}
-              placeholder={placeholder}
+              onChange={onFilChange}
+              value={formatFilValue(filAmount)}
+              placeholder="0 FIL"
+              type="number"
+              step={new FilecoinNumber('1', 'attofil').toFil()}
             />
           </Box>
           <Box display="block" height="80px" width="100%" borderTop="1px solid">
-            <BaseInput
+            <NumberInput
+              onFocus={() => {
+                setError('')
+                setFilAmount('')
+              }}
+              onBlur={async () => {
+                const filAmount = await fromUSD(fiatAmount)
+                const validBalance = checkBalance(filAmount)
+                if (validBalance) {
+                  setFilAmount(filAmount)
+                  onAmountChange(filAmount)
+                }
+              }}
               height="100%"
               width="100%"
               border="0"
-              onChange={onChange}
-              value={value}
-              placeholder={placeholder}
+              onChange={onFiatChange}
+              value={formatFiatValue(fiatAmount)}
+              placeholder="0 USD"
+              type="number"
+              step={new FilecoinNumber('1', 'attofil').toFil()}
+              min="0"
             />
           </Box>
         </Box>
-        {error && <p>{error}</p>}
       </Box>
     )
   }
 )
 
 Funds.propTypes = {
-  onChange: func.isRequired,
-  label: string.isRequired,
-  value: string,
+  /**
+   * A function that will return the FILECOIN denominated amount entered in the Funds input (in a FilecoinNumber instance)
+   */
+  onAmountChange: func.isRequired,
+  /**
+   * Balance of account sending the transaction
+   */
+  balance: instanceOf(FilecoinNumber).isRequired,
+  /**
+   * A string that represents the error message to display
+   */
   error: string,
-  placeholder: string
+  /**
+   * A setter to set the error when errors occur
+   */
+  setError: func.isRequired,
+  /**
+   * Gas limit selected by user (to make sure we dont go over the user's balance)
+   */
+  gasLimit: string
 }
 
 Funds.defaultProps = {
-  value: ''
+  error: '',
+  gasLimit: '1000',
+  gasPrice: '1'
 }
 
 export default Funds

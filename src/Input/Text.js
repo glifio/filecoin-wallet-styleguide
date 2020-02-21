@@ -18,7 +18,14 @@ const TextInputWrapper = styled.div`
   ${flexbox};
 `
 
-const TextInput = ({ onChange, value, placeholder, label, error }) => (
+const TextInput = ({
+  onChange,
+  value,
+  placeholder,
+  label,
+  error,
+  ...props
+}) => (
   <>
     <TextInputWrapper>
       <Box>
@@ -39,6 +46,7 @@ const TextInput = ({ onChange, value, placeholder, label, error }) => (
           onChange={onChange}
           value={value}
           placeholder={placeholder}
+          {...props}
         />
       </Box>
     </TextInputWrapper>

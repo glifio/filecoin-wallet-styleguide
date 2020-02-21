@@ -17,33 +17,9 @@ export { default as BaseButton } from './Button/BaseButton'
 export { default as Stepper } from './Stepper'
 export { default as Glyph } from './Glyph'
 export { default as Box } from './Box'
+export { default as MessageHistoryTable } from './MessageHistoryTable'
+export * from './Menu'
+export * from './Icons'
 
 // typography
 export * from './Typography'
-
-export const Menu = styled.ul`
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  ${space}
-  ${color}
-  ${layout}
-  ${border}
-  ${flexbox}
-`
-
-export const MenuItem = styled.li`
-  ${space}
-  ${color}
-  ${layout}
-  ${flexbox}
-`
-
-export const Icon = styled.span`
-  display: inline-block;
-  ${space}
-  ${color}
-  ${layout}
-  ${flexbox}
-  ${border}
-`

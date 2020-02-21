@@ -15,7 +15,7 @@ export const ADDRESS_PROPTYPE = (props, propName, componentName) => {
   return null
 }
 
-export const MESSAGE_PROPS = shape({
+export const MESSAGE_PROPS = {
   /**
    * Message sent to this address
    */
@@ -44,4 +44,4 @@ export const MESSAGE_PROPS = shape({
    * Either pending or confirmed
    */
   status: string.isRequired
-}).isRequired
+}
