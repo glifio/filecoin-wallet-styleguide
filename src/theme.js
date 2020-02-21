@@ -39,7 +39,7 @@ const baseColors = {
 const colors = {
   primary: baseColors.purple.deep,
   secondary: baseColors.purple.light,
-  textstyles: {
+  text: {
     title: baseColors.mono.purple.deep,
     text: baseColors.mono.nearblack,
     label: baseColors.mono.darkgray,
@@ -50,6 +50,12 @@ const colors = {
     input: baseColors.blue.light,
     screen: baseColors.blue.lighter,
     page: baseColors.blue.lightest,
+    card: {
+      account: baseColors.purple.deep,
+      balance: baseColors.mono.transparent,
+      confirmation: baseColors.green.light,
+      error: baseColors.red.light
+    },
     button: {
       primary: baseColors.green.primary,
       secondary: baseColors.mono.transparent
@@ -94,7 +100,7 @@ const theme = {
     },
     title: {
       fontSize: 5,
-      fontColor: colors.textstyles.title,
+      fontColor: colors.text.title,
       fontWeight: 700,
       margin: 0,
       lineHeight: 'title',
@@ -102,14 +108,14 @@ const theme = {
     },
     text: {
       fontSize: 3,
-      fontColor: colors.textstyles.text,
+      fontColor: colors.text.text,
       fontWeight: 400,
       lineHeight: 'copy',
       fontFamily: 'system-ui'
     },
     label: {
       fontSize: 1,
-      fontColor: colors.textstyles.label,
+      fontColor: colors.text.label,
       fontWeight: 700,
       textTransform: 'uppercase',
       lineHeight: 'solid',
