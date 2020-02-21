@@ -75,12 +75,12 @@ const colors = {
   },
   card: {
     account: {
-      background: core.primary,
-      color: core.secondary
+      background: colors.core.primary,
+      color: colors.core.secondary
     },
     balance: {
       background: baseColors.mono.transparent,
-      color: core.nearblack
+      color: colors.core.nearblack
     },
     confirmation: {
       background: baseColors.green.light
