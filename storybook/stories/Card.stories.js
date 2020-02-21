@@ -76,8 +76,9 @@ export const ErrorCard = () => (
     display="flex"
     flexDirection="column"
     justifyContent="space-between"
-    borderColor="silver"
-    backgroundColor="error.base"
+    color="status.fail.foreground"
+    borderColor="status.fail.background"
+    backgroundColor="status.fail.background"
     height={300}
   >
     <Box display="flex" alignItems="center">
