@@ -12,7 +12,7 @@ const baseColors = {
     lightest: '#F6F8FE',
     lighter: '#EFF3FD',
     light: '#E4EBFC',
-    mid: '#E4EBFC'
+    mid: '#d1ddfa'
   },
   green: {
     primary: '#1AD08F',
@@ -48,15 +48,17 @@ const colors = {
     transparent: baseColors.mono.transparent
   },
   background: {
-    inputactive: baseColors.blue.mid,
-    input: baseColors.blue.light,
+    app: baseColors.blue.lightest,
     screen: baseColors.blue.lighter,
-    page: baseColors.blue.lightest,
     card: {
       account: baseColors.purple.deep,
       balance: baseColors.mono.transparent,
       confirmation: baseColors.green.light,
       error: baseColors.red.light
+    },
+    input: {
+      base: baseColors.blue.light,
+      active: baseColors.blue.mid
     },
     button: {
       primary: baseColors.green.primary,
