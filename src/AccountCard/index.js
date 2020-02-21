@@ -39,7 +39,7 @@ const AccountCard = forwardRef(
       </Box>
       <Box display="flex">
         <Button
-          type="secondary"
+          buttonStyle="secondary"
           title="Switch"
           onClick={onAccountSwitch}
           color="core.secondary"
@@ -47,7 +47,7 @@ const AccountCard = forwardRef(
           p={2}
         />
         <Button
-          type="secondary"
+          buttonStyle="secondary"
           title="View on Ledger"
           onClick={onAccountSwitch}
           color="core.secondary"

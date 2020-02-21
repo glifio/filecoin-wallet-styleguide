@@ -18,16 +18,16 @@ const colorMatcher = {
 }
 
 const Button = forwardRef(
-  ({ type, disabled, onClick, title, ...props }, ref) => (
+  ({ buttonStyle, disabled, onClick, title, ...props }, ref) => (
     <BaseButton
       py={3}
       px={4}
       fontSize={3}
       border={1}
       borderRadius={2}
-      backgroundColor={colorMatcher.backgroundColor[type]}
-      color={colorMatcher.color[type]}
-      borderColor={colorMatcher.borderColor[type]}
+      backgroundColor={colorMatcher.backgroundColor[buttonStyle]}
+      color={colorMatcher.color[buttonStyle]}
+      borderColor={colorMatcher.borderColor[buttonStyle]}
       onClick={onClick}
       disabled={disabled}
       ref={ref}
@@ -39,7 +39,7 @@ const Button = forwardRef(
 )
 
 const ButtonPropTypes = {
-  type: oneOf(['primary', 'secondary']),
+  buttonStyle: oneOf(['primary', 'secondary']),
   onClick: func.isRequired,
   title: string.isRequired,
   disabled: bool
@@ -48,7 +48,7 @@ const ButtonPropTypes = {
 Button.propTypes = ButtonPropTypes
 
 Button.defaultProps = {
-  type: 'primary'
+  buttonStyle: 'primary'
 }
 
 export default Button
