@@ -76,10 +76,11 @@ const colors = {
   card: {
     account: {
       background: core.primary,
-      text: core.secondary
+      color: core.secondary
     },
     balance: {
-      background: baseColors.mono.transparent
+      background: baseColors.mono.transparent,
+      color: core.nearblack
     },
     confirmation: {
       background: baseColors.green.light
