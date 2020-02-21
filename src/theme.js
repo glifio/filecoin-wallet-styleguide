@@ -33,7 +33,7 @@ const baseColors = {
   }
 }
 
-// The core color array is the only non-semantic array here. This is because these colors are used so widely that it would be highly redundant to replicate these color values repeatedly within this "colors" object to style the text/background of every single Component the app renders.
+// The core color object is the only non-semantic object here. This is because these colors are used so widely that it would be highly redundant to replicate these color values repeatedly within this "colors" object to style the text/background of every single Component the app renders.
 const core = {
   primary: baseColors.purple.deep,
   secondary: baseColors.purple.light,
@@ -47,6 +47,7 @@ const core = {
 }
 
 const colors = {
+  core,
   buttons: {
     primary: {
       background: baseColors.green.primary,
