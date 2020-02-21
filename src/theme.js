@@ -33,20 +33,20 @@ const baseColors = {
   }
 }
 
-// colors
+// The core color array is the only non-semantic array here. This is because these colors are used so widely that it would be highly redundant to replicate these color values repeatedly within this "colors" object to style the text/background of every single Component the app renders.
+const core = {
+  primary: baseColors.purple.deep,
+  secondary: baseColors.purple.light,
+  black: baseColors.mono.black,
+  nearblack: baseColors.mono.nearblack,
+  darkgray: baseColors.mono.darkgray,
+  lightgray: baseColors.mono.lightgray,
+  silver: baseColors.mono.silver,
+  white: baseColors.mono.white,
+  transparent: baseColors.mono.transparent
+}
+
 const colors = {
-  // The core color array is the only non-semantic array here. This is because these colors are used so widely that it would be highly redundant to replicate these color values repeatedly within this "colors" object to style the text/background of every single Component the app renders.
-  core: {
-    primary: baseColors.purple.deep,
-    secondary: baseColors.purple.light,
-    black: baseColors.mono.black,
-    nearblack: baseColors.mono.nearblack,
-    darkgray: baseColors.mono.darkgray,
-    lightgray: baseColors.mono.lightgray,
-    silver: baseColors.mono.silver,
-    white: baseColors.mono.white,
-    transparent: baseColors.mono.transparent
-  },
   buttons: {
     primary: {
       background: baseColors.green.primary,
@@ -75,12 +75,12 @@ const colors = {
   },
   card: {
     account: {
-      background: colors.core.primary,
-      color: colors.core.secondary
+      background: core.primary,
+      color: core.secondary
     },
     balance: {
       background: baseColors.mono.transparent,
-      color: colors.core.nearblack
+      color: core.nearblack
     },
     confirmation: {
       background: baseColors.green.light
@@ -141,7 +141,7 @@ const theme = {
     },
     title: {
       fontSize: 5,
-      fontColor: colors.core.primary,
+      fontColor: core.primary,
       fontWeight: 700,
       margin: 0,
       lineHeight: 'title',
@@ -149,14 +149,14 @@ const theme = {
     },
     text: {
       fontSize: 3,
-      fontColor: colors.core.nearblack,
+      fontColor: core.nearblack,
       fontWeight: 400,
       lineHeight: 'copy',
       fontFamily: 'system-ui'
     },
     label: {
       fontSize: 1,
-      fontColor: colors.core.darkgray,
+      fontColor: core.darkgray,
       fontWeight: 700,
       textTransform: 'uppercase',
       lineHeight: 'solid',
