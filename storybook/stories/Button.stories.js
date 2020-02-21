@@ -8,7 +8,7 @@ export default {
 export const Primary = () => (
   <Button
     title="Primary Button"
-    type="primary"
+    buttonStyle="primary"
     onClick={e => console.log(e.target.value)}
   />
 )
@@ -16,7 +16,11 @@ export const Primary = () => (
 export const Secondary = () => (
   <Button
     title="Secondary Button"
-    type="secondary"
+    buttonStyle="secondary"
     onClick={e => console.log(e.target.value)}
   />
+)
+
+export const DisabledPrimary = () => (
+  <Button title="Disabled" buttonStyle="primary" disabled onClick={() => {}} />
 )

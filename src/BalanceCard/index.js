@@ -28,14 +28,14 @@ const BalanceCard = forwardRef(
       </Box>
       <Box display="flex" justifyContent="space-between">
         <Button
-          type="secondary"
+          buttonStyle="secondary"
           title="Receive"
           disabled={disableButtons}
           onClick={onReceive}
           width={120}
         />
         <Button
-          type="primary"
+          buttonStyle="primary"
           title="Send"
           disabled={disableButtons}
           onClick={onSend}

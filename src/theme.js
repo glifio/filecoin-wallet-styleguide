@@ -65,6 +65,12 @@ const colors = {
       secondary: baseColors.mono.transparent
     }
   },
+  border: {
+    button: {
+      primary: baseColors.green.primary,
+      secondary: baseColors.mono.nearblack
+    }
+  },
   status: {
     success: {
       background: baseColors.green.primary,

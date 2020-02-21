@@ -118,7 +118,7 @@ const Funds = forwardRef(
                 if (validBalance) {
                   const fiatAmount = await toUSD(filAmount)
                   setFiatAmount(fiatAmount)
-                  onAmountChange(filAmount)
+                  onAmountChange({ fil: filAmount, fiat: fiatAmount })
                 }
               }}
               height="100%"
@@ -142,7 +142,7 @@ const Funds = forwardRef(
                 const validBalance = checkBalance(filAmount)
                 if (validBalance) {
                   setFilAmount(filAmount)
-                  onAmountChange(filAmount)
+                  onAmountChange({ fil: filAmount, fiat: fiatAmount })
                 }
               }}
               height="100%"
@@ -164,7 +164,9 @@ const Funds = forwardRef(
 
 Funds.propTypes = {
   /**
-   * A function that will return the FILECOIN denominated amount entered in the Funds input (in a FilecoinNumber instance)
+   * A function that will return the fiat and FILECOIN denominated amounts
+   * entered in the Funds input (in a BigNumber and FilecoinNumber instance)
+   * @returns {Object} - { fiat: BigNumber, fil: FilecoinNumber }
    */
   onAmountChange: func.isRequired,
   /**
