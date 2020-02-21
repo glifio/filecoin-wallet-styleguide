@@ -1,5 +1,3 @@
-import { purple, green, red } from './colors'
-
 const baseColors = {
   mono: {
     black: '#000',
@@ -40,7 +38,7 @@ const colors = {
   primary: baseColors.purple.deep,
   secondary: baseColors.purple.light,
   text: {
-    title: baseColors.mono.purple.deep,
+    title: baseColors.purple.deep,
     text: baseColors.mono.nearblack,
     label: baseColors.mono.darkgray,
     button: baseColors.mono.nearblack
