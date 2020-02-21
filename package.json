@@ -19,8 +19,7 @@
     "prepare": "npm run build",
     "predeploy": "cd example && yarn install && yarn run build",
     "lint": "estlin src storybook",
-    "lint:fix": "eslint src storybook --fix",
-    "prepare:wallet:dev": "cd node_modules && rm -rf react && rm -rf react-dom && rm -rf styled-components && rm -rf prop-types"
+    "lint:fix": "eslint src storybook --fix"
   },
   "dependencies": {
     "@openworklabs/filecoin-address": "0.0.3",
@@ -40,7 +39,6 @@
     "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "babel-plugin-react-docgen": "^4.1.0",
     "babel-plugin-styled-components": "^1.10.6",
     "cross-env": "^5.1.4",
     "eslint": "^6.8.0",
@@ -59,7 +57,6 @@
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-eslint": "^7.0.0",
-    "rollup-plugin-external-globals": "^0.5.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-url": "^2.2.2",
