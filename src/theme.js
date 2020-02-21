@@ -35,13 +35,17 @@ const baseColors = {
 
 // colors
 const colors = {
-  primary: baseColors.purple.deep,
-  secondary: baseColors.purple.light,
-  text: {
-    title: baseColors.purple.deep,
-    text: baseColors.mono.nearblack,
-    label: baseColors.mono.darkgray,
-    button: baseColors.mono.nearblack
+  // The core color array is the only non-semantic array here. This is because these colors are used so widely that it would be highly redundant to replicate these color values repeatedly within this "colors" object to style the text/background of every single Component the app renders.
+  core: {
+    primary: baseColors.purple.deep,
+    secondary: baseColors.purple.light,
+    black: baseColors.mono.black,
+    nearblack: baseColors.mono.nearblack,
+    darkgray: baseColors.mono.darkgray,
+    lightgray: baseColors.mono.lightgray,
+    silver: baseColors.mono.silver,
+    white: baseColors.mono.white,
+    transparent: baseColors.mono.transparent
   },
   background: {
     inputactive: baseColors.blue.mid,
@@ -57,8 +61,7 @@ const colors = {
     button: {
       primary: baseColors.green.primary,
       secondary: baseColors.mono.transparent
-    },
-    confirmation: baseColors.green.light
+    }
   },
   status: {
     success: {
@@ -98,7 +101,7 @@ const theme = {
     },
     title: {
       fontSize: 5,
-      fontColor: colors.text.title,
+      fontColor: colors.core.primary,
       fontWeight: 700,
       margin: 0,
       lineHeight: 'title',
@@ -106,14 +109,14 @@ const theme = {
     },
     text: {
       fontSize: 3,
-      fontColor: colors.text.text,
+      fontColor: colors.core.nearblack,
       fontWeight: 400,
       lineHeight: 'copy',
       fontFamily: 'system-ui'
     },
     label: {
       fontSize: 1,
-      fontColor: colors.text.label,
+      fontColor: colors.core.darkgray,
       fontWeight: 700,
       textTransform: 'uppercase',
       lineHeight: 'solid',
