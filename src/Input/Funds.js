@@ -1,7 +1,6 @@
 import React, { forwardRef, useState } from 'react'
 import { instanceOf, func, string } from 'prop-types'
-import FilecoinNumber from '@openworklabs/filecoin-number'
-import BigNumber from 'bignumber.js'
+import { FilecoinNumber, BigNumber } from '@openworklabs/filecoin-number'
 
 import Box from '../Box'
 import NumberInput from './Number'

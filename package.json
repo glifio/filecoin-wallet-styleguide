@@ -1,6 +1,6 @@
 {
   "name": "@openworklabs/filecoin-wallet-styleguide",
-  "version": "0.1.1",
+  "version": "0.1.5",
   "description": "Styleguide used for the Filecoin web wallet.",
   "author": "Open Work Labs",
   "license": "MIT",
@@ -18,12 +18,12 @@
     "prepublish": "npm run build",
     "prepare": "npm run build",
     "predeploy": "cd example && yarn install && yarn run build",
-    "lint": "estlin src storybook",
+    "lint": "eslint src storybook",
     "lint:fix": "eslint src storybook --fix"
   },
   "dependencies": {
     "@openworklabs/filecoin-address": "0.0.3",
-    "@openworklabs/filecoin-number": "0.0.2",
+    "@openworklabs/filecoin-number": "0.0.3",
     "@svgr/rollup": "^4.2.0",
     "polished": "^3.4.4",
     "styled-system": "^5.1.4"
@@ -36,10 +36,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "babel-plugin-react-docgen": "^4.1.0",
+    "babel-eslint": "^10.0.3",
     "babel-plugin-styled-components": "^1.10.6",
     "cross-env": "^5.1.4",
     "eslint": "^6.8.0",
@@ -52,16 +52,16 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "prettier": "^1.16.4",
     "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "rollup": "^1.22.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "rollup": "^1.31.1",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-eslint": "^7.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-url": "^2.2.2",
-    "styled-components": "^4.3.0"
+    "styled-components": "^5.0.1"
   },
   "files": [
     "dist"
