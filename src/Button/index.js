@@ -6,8 +6,7 @@ const Button = forwardRef(
   ({ buttonStyle, disabled, onClick, title, ...props }, ref) => (
     <BaseButton
       buttonStyle={buttonStyle}
-      py={3}
-      px={4}
+      p={3}
       fontSize={3}
       borderRadius={2}
       onClick={onClick}
