@@ -10,17 +10,22 @@ export default styled.input`
   transition: 0.2s ease-in-out;
   text-align: right;
   cursor: text;
-
-  background: ${props => props.disabled && '#f5f5f5'};
+  background: ${props =>
+    props.disabled
+      ? props.theme.colors.status.inactive
+      : props.theme.colors.background.input.base};
 
   &:hover {
-    background: #f5f5f5;
+    background: ${props =>
+      props.disabled
+        ? props.theme.colors.status.inactive
+        : props.theme.colors.background.input.active};
   }
 
   &:focus {
     box-shadow: 0;
     outline: 0;
-    background: #f5f5f5;
+    background: ${props => props.theme.colors.background.input.active};
   }
 
   ${color}
