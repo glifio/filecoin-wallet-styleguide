@@ -9,6 +9,7 @@ import { Label } from '../Typography'
 const TextInputWrapper = styled.div`
   display: inline-block;
   border: ${props => props.theme.borders[1]};
+  border-color: ${props => props.theme.colors.core.darkgray};
   border-radius: ${props => props.theme.radii[1]};
   ${color} 
   ${space} 
@@ -39,6 +40,7 @@ const TextInput = ({
           height={7}
           border={0}
           borderLeft={1}
+          borderColor="core.darkgray"
           borderTopRightRadius={1}
           borderBottomRightRadius={1}
           onChange={onChange}

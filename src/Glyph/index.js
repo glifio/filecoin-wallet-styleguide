@@ -1,8 +1,12 @@
 import React, { forwardRef } from 'react'
+import styled from 'styled-components'
 import { string } from 'prop-types'
-import { Text } from '../Typography'
 import colors from '../colors'
 import Box from '../Box'
+
+const GlyphText = styled.h3`
+  font-size: ${props => props.theme.fontSizes[4]};
+`
 
 const Glyph = forwardRef(({ acronym, color, ...props }, ref) => (
   <Box
@@ -10,13 +14,13 @@ const Glyph = forwardRef(({ acronym, color, ...props }, ref) => (
     alignItems="center"
     justifyContent="center"
     size={6}
-    borderWidth={3}
+    borderWidth="0.1875rem"
     borderStyle={0}
     color={color}
     ref={ref}
     {...props}
   >
-    <Text>{acronym}</Text>
+    <GlyphText>{acronym}</GlyphText>
   </Box>
 ))
 

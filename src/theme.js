@@ -1,37 +1,99 @@
-import { purple, green, red } from './colors'
+const baseColors = {
+  mono: {
+    black: '#000',
+    nearblack: '#262626',
+    darkgray: '#666666',
+    lightgray: '#C4C4C4',
+    silver: '#999999',
+    white: '#FFF',
+    transparent: 'transparent'
+  },
+  blue: {
+    lightest: '#F6F8FE',
+    lighter: '#EFF3FD',
+    light: '#E4EBFC',
+    mid: '#d1ddfa'
+  },
+  green: {
+    primary: '#1AD08F',
+    light: '#D2F5ED',
+    dark: '#007056'
+  },
+  red: {
+    light: '#FC6D6F',
+    dark: '#660000'
+  },
+  yellow: {
+    light: '#FFDC99',
+    deep: '#FCA703'
+  },
+  purple: {
+    light: '#E0D7FE',
+    deep: '#5E26FF'
+  }
+}
 
 // colors
 const colors = {
-  text: '#262626',
-  background: '#F6F8FE',
-  purple: purple.base,
-  lightpurple: purple.text,
-  black: '#000',
-  nearBlack: '#111',
-  darkGray: '#333',
-  midGray: '#555',
-  silver: '#999',
-  'light-silver': '#aaa',
-  'moon-gray': '#ccc',
-  'light-gray': '#eee',
-  'near-white': '#f4f4f4',
-  white: '#fff',
-  transparent: 'transparent',
-  success: {
-    base: green.base,
-    text: green.text
+  // The core color array is the only non-semantic array here. This is because these colors are used so widely that it would be highly redundant to replicate these color values repeatedly within this "colors" object to style the text/background of every single Component the app renders.
+  core: {
+    primary: baseColors.purple.deep,
+    secondary: baseColors.purple.light,
+    black: baseColors.mono.black,
+    nearblack: baseColors.mono.nearblack,
+    darkgray: baseColors.mono.darkgray,
+    lightgray: baseColors.mono.lightgray,
+    silver: baseColors.mono.silver,
+    white: baseColors.mono.white,
+    transparent: baseColors.mono.transparent
   },
-  error: {
-    base: red.base,
-    textLight: red.textLight,
-    textDark: red.textDark
+  background: {
+    app: baseColors.blue.lightest,
+    screen: baseColors.blue.lighter,
+    card: {
+      account: baseColors.purple.deep,
+      balance: baseColors.mono.transparent,
+      confirmation: baseColors.green.light,
+      error: baseColors.red.light
+    },
+    input: {
+      base: baseColors.blue.light,
+      active: baseColors.blue.mid
+    },
+    button: {
+      primary: baseColors.green.primary,
+      secondary: baseColors.mono.transparent
+    }
+  },
+  status: {
+    success: {
+      background: baseColors.green.primary,
+      foreground: baseColors.mono.darkgray
+    },
+    pending: {
+      background: baseColors.yellow.deep,
+      foreground: baseColors.mono.darkgray
+    },
+    fail: {
+      background: baseColors.red.light,
+      foreground: baseColors.mono.darkgray
+    },
+    inactive: baseColors.mono.lightgray
   }
 }
 
 // theme.js
 const theme = {
   colors,
-  fontSizes: ['0rem', '0.875rem', '1rem', '1.25rem', '1.5rem', '2rem', '3rem'],
+  fontSizes: [
+    '0rem',
+    '0.875rem',
+    '1.125rem',
+    '1.25rem',
+    '1.5rem',
+    '2rem',
+    '3rem'
+  ],
   fontWeights: [0, 400, 600, 900],
   letterSpacings: [0, 1, 2, 4, 8],
   lineHeights: {
@@ -49,19 +111,22 @@ const theme = {
     },
     title: {
       fontSize: 5,
+      fontColor: colors.core.primary,
       fontWeight: 700,
       margin: 0,
       lineHeight: 'title',
       fontFamily: 'system-ui'
     },
     text: {
-      fontSize: 2,
+      fontSize: 3,
+      fontColor: colors.core.nearblack,
       fontWeight: 400,
       lineHeight: 'copy',
       fontFamily: 'system-ui'
     },
     label: {
-      fontSize: 2,
+      fontSize: 1,
+      fontColor: colors.core.darkgray,
       fontWeight: 700,
       textTransform: 'uppercase',
       lineHeight: 'solid',

@@ -12,7 +12,7 @@ export const ThreeSteps = () => {
       totalSteps={3}
       incompleteDotColor="grey"
       completeDotColor="green"
-      textColor="blue"
+      textColor="core.primary"
     />
   )
 }
