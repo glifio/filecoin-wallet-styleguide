@@ -58,10 +58,10 @@ const colors = {
       borderColor: baseColors.mono.nearblack,
       color: baseColors.mono.nearblack
     },
-    'transparent-light': {
-      background: 'blue',
-      borderColor: 'blue',
-      color: 'blue'
+    tertiary: {
+      background: baseColors.mono.transparent,
+      borderColor: baseColors.purple.light,
+      color: baseColors.purple.light
     },
     'transparent-dark': {
       bg: 'black',
@@ -71,26 +71,27 @@ const colors = {
   },
   background: {
     app: baseColors.blue.lightest,
-    screen: baseColors.blue.lighter,
-    card: {
-      account: baseColors.purple.deep,
-      balance: baseColors.mono.transparent,
-      confirmation: baseColors.green.light,
-      error: baseColors.red.light
+    screen: baseColors.blue.lighter
+  },
+  card: {
+    account: {
+      background: core.primary,
+      text: core.secondary
     },
-    input: {
-      base: baseColors.blue.light,
-      active: baseColors.blue.mid
+    balance: {
+      background: baseColors.mono.transparent
     },
-    button: {
-      primary: baseColors.green.primary,
-      secondary: baseColors.mono.transparent
+    confirmation: {
+      background: baseColors.green.light
+    },
+    error: {
+      background: baseColors.red.light
     }
   },
-  border: {
-    button: {
-      primary: baseColors.green.primary,
-      secondary: baseColors.mono.nearblack
+  input: {
+    background: {
+      base: baseColors.blue.light,
+      active: baseColors.blue.mid
     }
   },
   status: {
