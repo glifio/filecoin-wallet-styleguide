@@ -15,6 +15,20 @@ export const ADDRESS_PROPTYPE = (props, propName, componentName) => {
   return null
 }
 
+export const FILECOIN_NUMBER_PROP = (props, propName, componentName) => {
+  // instanceof prop checking is broken in nextjs on server side render cycles
+  const representsANum = Number.isNaN(Number(props[propName].toString()))
+  const hasFilecoinNumMethods = !!(
+    props[propName].toFil && props[propName].toAttoFil
+  )
+  if (!(representsANum || hasFilecoinNumMethods))
+    return new Error(
+      `Invalid prop: ${propName} supplied to ${componentName}. Validation failed.`
+    )
+
+  return null
+}
+
 export const MESSAGE_PROPS = shape({
   /**
    * Message sent to this address

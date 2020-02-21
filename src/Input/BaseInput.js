@@ -9,6 +9,9 @@ export default styled.input`
   border-radius: ${props => props.theme.radii[1]}
   transition: 0.2s ease-in-out;
   text-align: right;
+  cursor: text;
+
+  background: ${props => props.disabled && '#f5f5f5'};
 
   &:hover {
     background: #f5f5f5;
@@ -19,6 +22,7 @@ export default styled.input`
     outline: 0;
     background: #f5f5f5;
   }
+
   ${color}
   ${space}
   ${layout}
