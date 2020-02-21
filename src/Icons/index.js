@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react'
+import { oneOf } from 'prop-types'
 import styled from 'styled-components'
-import { theme } from '../'
+import theme from '../theme'
 import { space, color, layout, flexbox, border } from 'styled-system'
 
 const IconBase = styled.svg`
@@ -147,6 +148,10 @@ export const IconSend = forwardRef((props, ref) => (
   </IconBase>
 ))
 
+IconSend.propTypes = {
+  status: oneOf(['confirmed', 'pending']).isRequired
+}
+
 export const IconReceive = forwardRef((props, ref) => (
   <IconBase
     width="24"
@@ -192,3 +197,7 @@ export const IconReceive = forwardRef((props, ref) => (
     />
   </IconBase>
 ))
+
+IconReceive.propTypes = {
+  status: oneOf(['confirmed', 'pending']).isRequired
+}

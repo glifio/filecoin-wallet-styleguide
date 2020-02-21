@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { space, color, layout, border, flexbox } from 'styled-system'
-import { func, string } from 'prop-types'
+import { func, string, bool } from 'prop-types'
 import BaseInput from './BaseInput'
 import Box from '../Box'
 import { Label } from '../Typography'
@@ -24,6 +24,7 @@ const TextInput = ({
   placeholder,
   label,
   error,
+  disabled,
   ...props
 }) => (
   <>
@@ -46,6 +47,7 @@ const TextInput = ({
           onChange={onChange}
           value={value}
           placeholder={placeholder}
+          disabled={disabled}
           {...props}
         />
       </Box>
@@ -59,11 +61,13 @@ TextInput.propTypes = {
   label: string.isRequired,
   value: string,
   placeholder: string,
+  disabled: bool,
   error: string
 }
 
 TextInput.defaultProps = {
-  value: ''
+  value: '',
+  bool: false
 }
 
 export default TextInput

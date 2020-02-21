@@ -1,10 +1,11 @@
 import React, { forwardRef, useState } from 'react'
-import { instanceOf, func, string } from 'prop-types'
+import { func, string } from 'prop-types'
 import { FilecoinNumber, BigNumber } from '@openworklabs/filecoin-number'
 
 import Box from '../Box'
 import NumberInput from './Number'
 import { Text } from '../Typography'
+import { FILECOIN_NUMBER_PROP } from '../customPropTypes'
 
 const formatFilValue = number => {
   if (!number) return ''
@@ -169,7 +170,7 @@ Funds.propTypes = {
   /**
    * Balance of account sending the transaction
    */
-  balance: instanceOf(FilecoinNumber).isRequired,
+  balance: FILECOIN_NUMBER_PROP,
   /**
    * A string that represents the error message to display
    */

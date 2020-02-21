@@ -9,10 +9,17 @@ export default styled.input`
   border-radius: ${props => props.theme.radii[1]}
   transition: 0.2s ease-in-out;
   text-align: right;
-  background: ${props => props.theme.colors.background.input.base};
+  cursor: text;
+  background: ${props =>
+    props.disabled
+      ? props.theme.colors.status.inactive
+      : props.theme.colors.background.input.base};
 
   &:hover {
-    background: ${props => props.theme.colors.background.input.active};
+    background: ${props =>
+      props.disabled
+        ? props.theme.colors.status.inactive
+        : props.theme.colors.background.input.active};
   }
 
   &:focus {
@@ -20,6 +27,7 @@ export default styled.input`
     outline: 0;
     background: ${props => props.theme.colors.background.input.active};
   }
+
   ${color}
   ${space}
   ${layout}
