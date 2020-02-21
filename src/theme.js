@@ -47,6 +47,28 @@ const colors = {
     white: baseColors.mono.white,
     transparent: baseColors.mono.transparent
   },
+  buttons: {
+    primary: {
+      background: baseColors.green.primary,
+      borderColor: baseColors.green.primary,
+      color: baseColors.mono.nearblack
+    },
+    secondary: {
+      background: baseColors.mono.transparent,
+      borderColor: baseColors.mono.nearblack,
+      color: baseColors.mono.nearblack
+    },
+    'transparent-light': {
+      background: 'blue',
+      borderColor: 'blue',
+      color: 'blue'
+    },
+    'transparent-dark': {
+      bg: 'black',
+      borderColor: 'black',
+      color: 'black'
+    }
+  },
   background: {
     app: baseColors.blue.lightest,
     screen: baseColors.blue.lighter,

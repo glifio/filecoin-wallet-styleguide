@@ -6,12 +6,12 @@ export default styled.button`
   background-color: ${props =>
     props.disabled
       ? props.theme.colors.status.inactive
-      : props.theme.colors.background.button[props.buttonStyle]};
+      : props.theme.buttons[props.buttonStyle].background};
   border-color: ${props =>
     props.disabled
       ? props.theme.colors.status.inactive
-      : props.theme.colors.border.button[props.buttonStyle]};
-  color: ${props => props.theme.colors.core.nearblack};
+      : props.theme.buttons[props.buttonStyle].borderColor};
+  color: ${props => props.theme.buttons[props.buttonStyle].color};
   ${borderRadius}
   ${space}
   ${layout}

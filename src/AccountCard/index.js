@@ -3,7 +3,7 @@ import { string, func } from 'prop-types'
 import { ADDRESS_PROPTYPE } from '../customPropTypes'
 import Box from '../Box'
 import Glyph from '../Glyph'
-import Button from '../Button'
+import ButtonBase from '../ButtonBase'
 import { BigTitle, Text } from '../Typography'
 
 const truncate = string => `${string.slice(0, 4)}...${string.slice(-4)}`
@@ -38,23 +38,24 @@ const AccountCard = forwardRef(
         <Text margin={0}>{truncate(address)}</Text>
       </Box>
       <Box display="flex">
-        <Button
-          buttonStyle="secondary"
-          title="Switch"
+        <ButtonBase
           onClick={onAccountSwitch}
           color="core.secondary"
           borderColor="core.secondary"
           p={2}
-        />
-        <Button
-          buttonStyle="secondary"
+        >
+          Switch
+        </ButtonBase>
+        <ButtonBase
           title="View on Ledger"
           onClick={onAccountSwitch}
           color="core.secondary"
           borderColor="core.secondary"
           ml={2}
           p={2}
-        />
+        >
+          View on Ledger Device
+        </ButtonBase>
       </Box>
     </Box>
   )
