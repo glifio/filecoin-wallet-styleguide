@@ -16,15 +16,15 @@ const BalanceCard = forwardRef(
       border={1}
       borderRadius={2}
       p={3}
-      bg="background.card.balance"
+      bg="card.balance.background"
       ref={ref}
       {...props}
     >
       <Label>Balance</Label>
       <Box>
-        <BigTitle color="core.nearblack">{balance}FIL</BigTitle>
+        <BigTitle color="card.balance.color">{balance}FIL</BigTitle>
         {/* @alex this will change to be dynamically created, for now just pretend 1 FIL = 5 USD */}
-        <Title color="core.darkgray">{Number(balance) * 5}USD</Title>
+        <Title color="card.balance.color">{Number(balance) * 5}USD</Title>
       </Box>
       <Box display="flex" justifyContent="space-between">
         <Button

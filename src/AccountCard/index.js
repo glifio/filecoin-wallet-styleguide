@@ -18,8 +18,8 @@ const AccountCard = forwardRef(
       height={11}
       borderRadius={2}
       p={3}
-      color="core.secondary"
-      bg="background.card.account"
+      color="card.account.color"
+      bg="card.account.background"
       boxShadow={1}
       ref={ref}
       {...props}
@@ -28,30 +28,26 @@ const AccountCard = forwardRef(
         display="flex"
         alignItems="center"
         justifyContent="flex-start"
-        color="core.secondary"
+        color="card.account.color"
       >
-        <Glyph mr={3} color="core.secondary" acronym="Ac" />
+        <Glyph mr={3} color="card.account.color" acronym="Ac" />
         <Text>Account</Text>
       </Box>
-      <Box color="core.secondary">
+      <Box color="card.account.color">
         <BigTitle>{alias}</BigTitle>
         <Text margin={0}>{truncate(address)}</Text>
       </Box>
       <Box display="flex">
         <Button
-          buttonStyle="secondary"
+          buttonStyle="tertiary"
           title="Switch"
           onClick={onAccountSwitch}
-          color="core.secondary"
-          borderColor="core.secondary"
           p={2}
         />
         <Button
-          buttonStyle="secondary"
+          buttonStyle="tertiary"
           title="View on Ledger"
           onClick={onAccountSwitch}
-          color="core.secondary"
-          borderColor="core.secondary"
           ml={2}
           p={2}
         />

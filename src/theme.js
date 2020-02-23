@@ -33,42 +33,67 @@ const baseColors = {
   }
 }
 
-// colors
+// The core color object is the only non-semantic object here. This is because these colors are used so widely that it would be highly redundant to replicate these color values repeatedly within this "colors" object to style the text/background of every single Component the app renders.
+const core = {
+  primary: baseColors.purple.deep,
+  secondary: baseColors.purple.light,
+  black: baseColors.mono.black,
+  nearblack: baseColors.mono.nearblack,
+  darkgray: baseColors.mono.darkgray,
+  lightgray: baseColors.mono.lightgray,
+  silver: baseColors.mono.silver,
+  white: baseColors.mono.white,
+  transparent: baseColors.mono.transparent
+}
+
 const colors = {
-  // The core color array is the only non-semantic array here. This is because these colors are used so widely that it would be highly redundant to replicate these color values repeatedly within this "colors" object to style the text/background of every single Component the app renders.
-  core: {
-    primary: baseColors.purple.deep,
-    secondary: baseColors.purple.light,
-    black: baseColors.mono.black,
-    nearblack: baseColors.mono.nearblack,
-    darkgray: baseColors.mono.darkgray,
-    lightgray: baseColors.mono.lightgray,
-    silver: baseColors.mono.silver,
-    white: baseColors.mono.white,
-    transparent: baseColors.mono.transparent
+  core,
+  buttons: {
+    primary: {
+      background: baseColors.green.primary,
+      borderColor: baseColors.green.primary,
+      color: baseColors.mono.nearblack
+    },
+    secondary: {
+      background: baseColors.mono.transparent,
+      borderColor: baseColors.mono.nearblack,
+      color: baseColors.mono.nearblack
+    },
+    tertiary: {
+      background: baseColors.mono.transparent,
+      borderColor: baseColors.purple.light,
+      color: baseColors.purple.light
+    },
+    'transparent-dark': {
+      bg: 'black',
+      borderColor: 'black',
+      color: 'black'
+    }
   },
   background: {
     app: baseColors.blue.lightest,
-    screen: baseColors.blue.lighter,
-    card: {
-      account: baseColors.purple.deep,
-      balance: baseColors.mono.transparent,
-      confirmation: baseColors.green.light,
-      error: baseColors.red.light
+    screen: baseColors.blue.lighter
+  },
+  card: {
+    account: {
+      background: core.primary,
+      color: core.secondary
     },
-    input: {
-      base: baseColors.blue.light,
-      active: baseColors.blue.mid
+    balance: {
+      background: baseColors.mono.transparent,
+      color: core.nearblack
     },
-    button: {
-      primary: baseColors.green.primary,
-      secondary: baseColors.mono.transparent
+    confirmation: {
+      background: baseColors.green.light
+    },
+    error: {
+      background: baseColors.red.light
     }
   },
-  border: {
-    button: {
-      primary: baseColors.green.primary,
-      secondary: baseColors.mono.nearblack
+  input: {
+    background: {
+      base: baseColors.blue.light,
+      active: baseColors.blue.mid
     }
   },
   status: {
@@ -117,7 +142,7 @@ const theme = {
     },
     title: {
       fontSize: 5,
-      fontColor: colors.core.primary,
+      fontColor: core.primary,
       fontWeight: 700,
       margin: 0,
       lineHeight: 'title',
@@ -125,14 +150,14 @@ const theme = {
     },
     text: {
       fontSize: 3,
-      fontColor: colors.core.nearblack,
+      fontColor: core.nearblack,
       fontWeight: 400,
       lineHeight: 'copy',
       fontFamily: 'system-ui'
     },
     label: {
       fontSize: 1,
-      fontColor: colors.core.darkgray,
+      fontColor: core.darkgray,
       fontWeight: 700,
       textTransform: 'uppercase',
       lineHeight: 'solid',
