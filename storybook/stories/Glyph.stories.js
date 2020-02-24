@@ -6,5 +6,5 @@ export default {
 }
 
 export const GlyphExample = () => {
-  return <Glyph acronym="LD" color="purple" />
+  return <Glyph acronym="LD" color="purple" backgroundColor="white" />
 }
