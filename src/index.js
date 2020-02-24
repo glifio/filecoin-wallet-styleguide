@@ -1,6 +1,3 @@
-import styled from 'styled-components'
-import { color, border, layout, space, flexbox } from 'styled-system'
-
 export { default as theme } from './theme'
 export { default as ThemeProvider } from './ThemeProvider'
 export { default as BaseStyles } from './BaseStyles'
