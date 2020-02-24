@@ -8,8 +8,8 @@ import { Label } from '../Typography'
 
 const TextInputWrapper = styled.div`
   display: inline-block;
-  border: ${props => props.theme.borders[1]};
-  border-color: ${props => props.theme.colors.core.darkgray};
+  /* border: ${props => props.theme.borders[1]}; */
+  /* border-color: ${props => props.theme.colors.core.darkgray}; */
   border-radius: ${props => props.theme.radii[1]};
   ${color} 
   ${space} 
@@ -28,9 +28,15 @@ const TextInput = ({
   ...props
 }) => (
   <>
-    <TextInputWrapper>
-      <Box>
-        <Box display="inline-block" px={3} minWidth="64px" textAlign="center">
+    <TextInputWrapper
+      width="100%"
+      mt={3}
+      border={1}
+      borderColor="input.border"
+      borderRadius={1}
+    >
+      <Box display="flex" alignItems="center">
+        <Box display="inline-block" px={3} minWidth="120px" textAlign="center">
           {label}
         </Box>
         {/* how do we chunk the address in the input component? */}
@@ -41,7 +47,7 @@ const TextInput = ({
           height={7}
           border={0}
           borderLeft={1}
-          borderColor="core.darkgray"
+          borderColor="input.border"
           borderTopRightRadius={1}
           borderBottomRightRadius={1}
           onChange={onChange}

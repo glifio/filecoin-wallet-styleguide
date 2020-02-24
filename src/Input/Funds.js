@@ -92,6 +92,8 @@ const Funds = forwardRef(
         minHeight="160px"
         border={1}
         borderRadius={1}
+        borderColor="input.border"
+        mt={3}
         ref={ref}
         {...props}
       >
@@ -102,7 +104,8 @@ const Funds = forwardRef(
           flexGrow="1"
           width="280px"
           textAlign="center"
-          borderRight="1px solid #444"
+          borderRight={1}
+          borderColor="input.border"
         >
           {error ? <Text>{error}</Text> : <Text>Amount</Text>}
         </Box>
@@ -131,7 +134,13 @@ const Funds = forwardRef(
               step={new FilecoinNumber('1', 'attofil').toFil()}
             />
           </Box>
-          <Box display="block" height="80px" width="100%" borderTop="1px solid">
+          <Box
+            display="block"
+            height="80px"
+            width="100%"
+            borderTop={1}
+            borderColor="input.border"
+          >
             <NumberInput
               onFocus={() => {
                 setError('')

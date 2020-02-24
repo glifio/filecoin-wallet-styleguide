@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import { space, color, layout, border, flexbox } from 'styled-system'
 
 export default styled.input`
-  display: inline-block;
+  display: flex;
+  flex-grow: 1;
   padding-left: ${props => props.theme.space[2]}px;
   padding-right: ${props => props.theme.space[2]}px;
   border: ${props => props.theme.borders[1]}
