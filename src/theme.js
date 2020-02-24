@@ -84,7 +84,8 @@ const colors = {
       color: core.nearblack
     },
     confirmation: {
-      background: baseColors.green.light
+      background: baseColors.green.light,
+      foreground: baseColors.green.dark
     },
     error: {
       background: baseColors.red.light
