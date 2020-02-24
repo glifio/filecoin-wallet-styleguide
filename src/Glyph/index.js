@@ -8,21 +8,24 @@ const GlyphText = styled.h3`
   font-size: ${props => props.theme.fontSizes[4]};
 `
 
-const Glyph = forwardRef(({ acronym, color, ...props }, ref) => (
-  <Box
-    display="flex"
-    alignItems="center"
-    justifyContent="center"
-    size={6}
-    borderWidth="0.1875rem"
-    borderStyle={0}
-    color={color}
-    ref={ref}
-    {...props}
-  >
-    <GlyphText>{acronym}</GlyphText>
-  </Box>
-))
+const Glyph = forwardRef(
+  ({ acronym, color, backgroundColor, ...props }, ref) => (
+    <Box
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      size={6}
+      borderWidth="0.1875rem"
+      borderStyle={0}
+      backgroundColor={backgroundColor}
+      color={color}
+      ref={ref}
+      {...props}
+    >
+      <GlyphText>{acronym}</GlyphText>
+    </Box>
+  )
+)
 
 Glyph.propTypes = {
   /**
@@ -32,7 +35,8 @@ Glyph.propTypes = {
   /**
    * The color of the text and border
    */
-  color: string
+  color: string,
+  backgroundColor: string
 }
 
 Glyph.defaultProps = {
