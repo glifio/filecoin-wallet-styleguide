@@ -94,7 +94,8 @@ const colors = {
     background: {
       base: baseColors.blue.light,
       active: baseColors.blue.mid
-    }
+    },
+    border: core.silver
   },
   status: {
     success: {
