@@ -5,7 +5,7 @@ const baseColors = {
     darkgray: '#666666',
     lightgray: '#C4C4C4',
     silver: '#999999',
-    white: '#FFF',
+    white: '#ffffff',
     transparent: 'transparent'
   },
   blue: {
