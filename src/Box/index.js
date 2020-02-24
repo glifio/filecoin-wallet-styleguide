@@ -10,6 +10,7 @@ import styled from 'styled-components'
 
 export default styled.div`
   min-width: 0;
+  box-sizing: border-box;
   ${border}
   ${space}
   ${color}
