@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react'
 import { func, bool, string, oneOf } from 'prop-types'
 import BaseButton from './BaseButton'
+import theme from '../theme'
 
 const Button = forwardRef(
   ({ buttonStyle, disabled, onClick, title, ...props }, ref) => (
@@ -20,7 +21,7 @@ const Button = forwardRef(
 )
 
 const ButtonPropTypes = {
-  buttonStyle: oneOf(['primary', 'secondary']),
+  buttonStyle: oneOf(Object.keys(theme.colors.buttons)),
   onClick: func.isRequired,
   title: string.isRequired,
   disabled: bool
