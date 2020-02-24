@@ -21,7 +21,7 @@ const Stepper = forwardRef(
       </Text>
       {new Array(totalSteps).fill(true).map((_, i) => (
         <Box key={i} display="flex" alignItems="center">
-          {step <= i + 1 ? (
+          {step < i + 1 ? (
             <Box
               display="inline-block"
               width={2}
